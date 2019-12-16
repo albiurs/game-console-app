@@ -1,23 +1,129 @@
-# Compiled class file
+# Compiled source #
+###################
+*.com
 *.class
+*.dll
+*.exe
+*.o
+*.so
 
-# Log file
-*.log
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
 *.ear
-*.zip
-*.tar.gz
+*.gz
+*.iso
+*.jar
+*.nar
+*.war
 *.rar
+*.tar
+*.zip
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
 hs_err_pid*
+
+
+# Always-ignore extensions #
+############################
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*.sass-cache
+*~
+
+
+# OS and editor generated files and folders #
+#############################################
+._*
+.cache
+.DS_Store
+.DS_Store?
+.komodotools
+.metadata/
+.settings
+.Spotlight-V100
+.tmp/
+.tmproj
+.Trashes
+*.esproj
+*.komodoproject
+*.sublime-project
+*.sublime-workspace
+**/bin/
+_notes
+dwsync.xml
+ehthumbs.db
+node_modules/
+Thumbs.db
+
+
+# Project related files & folders #
+###################################
+.cproject
+.komodotools
+.mtj.tmp/
+.project
+.tmproj
+*.ctxt
+*.esproj
+*.komodoproject
+*.sublime-project
+*.sublime-workspace
+_*/
+_notes
+nbproject
+spec.d
+
+!**/src/main/**
+!**/src/test/**
+
+
+# IntelliJ IDEA #
+#################
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+
+# Maven #
+#########
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+#.mvn/wrapper/maven-wrapper.jar
+
+!.mvn/wrapper/maven-wrapper.jar
+
+
+# NetBeans #
+############
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
