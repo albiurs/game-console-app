@@ -3,18 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>game-console-app</artifactId>
+        <artifactId>main</artifactId>
         <groupId>ch.zhaw</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>main</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>main-console</module>
-        <module>main-web</module>
-    </modules>
+    <artifactId>main-web</artifactId>
 
 
 </project>
