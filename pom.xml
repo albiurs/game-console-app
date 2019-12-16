@@ -1,48 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<packaging>pom</packaging>
-	<modules>
-		<module>main</module>
-	</modules>
+
+
+	<!-- Spring Boot Starter Parent -->
+	<!-- Inherited Spring Boot Starter Parent Framework -->
+	<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
+
+	<!-- Maven POM Model Version - mandatory, to enforce a specific XML model in case new models are defined.-->
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<!-- Module Definitions -->
 	<groupId>ch.zhaw</groupId>
 	<artifactId>game-console-app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${revision}</version>
 	<name>game-console-app</name>
 	<description>Game Console App</description>
 
+
+	<!-- Properties -->
 	<properties>
+
+		<!-- Project Version/Revision -->
+		<revision>0.0.1-SNAPSHOT</revision>
+
+		<!-- Java Version -->
 		<java.version>11</java.version>
+
 	</properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
+	<!-- Sub-modules -->
+	<modules>
+		<module>main</module>
+	</modules>
+
+
+	<!-- POM Packaging - container of sub-modules -->
+	<packaging>pom</packaging>
+
+
+	<!-- Dependencies -->
+	<dependencies>
+
+		<!-- Project Lombok -->
+		<!-- Add extended Spring annotation functionality -->
+		<!-- https://projectlombok.org/ -->
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<!-- Spring Boot Test Starter -->
+		<!-- Add  JUnit test functionality -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -54,15 +75,9 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+
 
 </project>

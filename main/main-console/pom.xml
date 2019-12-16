@@ -2,14 +2,56 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <!-- Parent Module -->
     <parent>
         <artifactId>main</artifactId>
         <groupId>ch.zhaw</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
+
+
+    <!-- Maven POM Model Version -->
     <modelVersion>4.0.0</modelVersion>
 
+
+    <!-- Module Definitions -->
     <artifactId>main-console</artifactId>
+
+
+    <!-- Dependencies -->
+    <dependencies>
+
+        <!-- Spring Boot Starter -->
+        <!-- Add additional dependencies like Spring Context, Spring Autoconfigure, Logback, Slf4j... -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+    <!-- Build -->
+    <build>
+
+        <!-- Plugins -->
+        <plugins>
+
+            <!-- Spring Boot Maven Plugin -->
+            <!-- This plugin is used to build an executable jar or war archive and run an application from the console
+            or distribute an executable jar. -->
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+
+    </build>
 
 
 </project>
