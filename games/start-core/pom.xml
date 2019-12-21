@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <!-- Parent Module -->
+    <parent>
+        <artifactId>games</artifactId>
+        <groupId>ch.zhaw</groupId>
+        <version>${revision}</version>
+    </parent>
+
+
+    <!-- Maven POM Model Version -->
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <!-- Module Definitions -->
+    <artifactId>start-core</artifactId>
+
+
+    <!-- Dependencies -->
+    <dependencies>
+
+        <!-- Spring Boot Starter -->
+        <!-- Add additional dependencies like Spring Context, Spring Autoconfigure, Logback, Slf4j... -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

@@ -32,6 +32,8 @@
         <module>guessnumber-core</module>
         <module>tictactoe-console</module>
         <module>tictactoe-core</module>
+        <module>start-console</module>
+        <module>start-core</module>
     </modules>
 
 
