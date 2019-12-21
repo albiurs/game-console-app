@@ -6,7 +6,7 @@
 
     <!-- Parent Module -->
     <parent>
-        <artifactId>main</artifactId>
+        <artifactId>games</artifactId>
         <groupId>ch.zhaw</groupId>
         <version>${revision}</version>
     </parent>
@@ -17,7 +17,7 @@
 
 
     <!-- Module Definitions -->
-    <artifactId>main-console</artifactId>
+    <artifactId>gameoflife-console</artifactId>
 
 
     <!-- Dependencies -->
@@ -26,31 +26,11 @@
         <!-- Transitive Dependency -->
         <dependency>
             <groupId>ch.zhaw</groupId>
-            <artifactId>gameoflife-console</artifactId>
+            <artifactId>gameoflife-core</artifactId>
             <version>${project.version}</version>
         </dependency>
 
     </dependencies>
-
-
-    <!-- Build -->
-    <build>
-
-        <!-- Plugins -->
-        <plugins>
-
-            <!-- Spring Boot Maven Plugin -->
-            <!-- This plugin is used to build an executable jar or war archive and run an application from the console
-            or distribute an executable jar. -->
-            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-
-        </plugins>
-
-    </build>
 
 
 </project>

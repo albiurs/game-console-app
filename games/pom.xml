@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <!-- Parent Module -->
+    <parent>
+        <artifactId>game-console-app</artifactId>
+        <groupId>ch.zhaw</groupId>
+        <version>${revision}</version>
+    </parent>
+
+
+    <!-- Maven POM Model Version -->
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <!-- Module Definitions -->
+    <artifactId>games</artifactId>
+
+
+    <!-- POM Packaging - container of sub-modules -->
+    <packaging>pom</packaging>
+
+
+    <!-- Sub-modules -->
+    <modules>
+        <module>gameoflife-console</module>
+        <module>gameoflife-core</module>
+    </modules>
+
+
+</project>
