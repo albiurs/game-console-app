@@ -30,14 +30,14 @@ public class MainConsole {
 	public static void main(String[] args) {
 
 		// Enable console logging
-		log.info("== Have Fun Project ==");
+		log.info("== Game Console App ==");
 		log.info("Core Main.main() method called");
 		log.info("Start of application initiated");
 
 		// SpringApplication.run(): Method to start the whole Spring Framework.
-		log.info("SpringApplication.run(Main.class, args) start...");
+		log.info("SpringApplication.run() initiated");
 		SpringApplication.run(MainConsole.class, args);
-		log.info("SpringApplication.run(Main.class, args) finished");
+		log.info("SpringApplication.run() terminated");
 
 	}
 
