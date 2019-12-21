@@ -1,0 +1,16 @@
+<!-- File name "logback-spring.xml" required for Spring to completely control the log initialization.
+    With the default file name "logback.xml" the log initializes too early. -->
+
+<configuration>
+
+    <!-- include default Logback configuration from:
+    External Libraries > Maven: org.springframework.boot:spring-boot:x.x.xRELEASE > spring-boot-x.x.x.RELEASE.jar -->
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <!-- define logging levels -->
+    <logger name="ch.zhaw" level="DEBUG"/>
+    <logger name="org.springframework" level="INFO"/>
+<!--    <logger name="org.springframework.boot" level="INFO"/>-->
+    <logger name="org.thymeleaf" level="INFO"/>
+
+</configuration>

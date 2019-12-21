@@ -52,16 +52,6 @@
 	<!-- Dependencies -->
 	<dependencies>
 
-		<!-- Project Lombok -->
-		<!-- Add extended Spring annotation functionality -->
-		<!-- https://projectlombok.org/ -->
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-
 		<!-- Spring Boot Test Starter -->
 		<!-- Add  JUnit test functionality -->
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
@@ -77,7 +67,49 @@
 			</exclusions>
 		</dependency>
 
+		<!-- Apache Maven Javadoc Plugin -->
+		<!-- Call "mvn javadoc:javadoc" for automatic html Javadoc build in folder target/site/ -->
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+
+		<!-- Project Lombok -->
+		<!-- Add extended Spring annotation functionality -->
+		<!-- https://projectlombok.org/ -->
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
 	</dependencies>
+
+
+	<!-- Build -->
+	<build>
+
+		<!-- Plugins -->
+		<plugins>
+
+			<plugin>
+				<!-- Apache Maven Javadoc Plugin -->
+				<!-- Call "mvn javadoc:javadoc" for automatic html Javadoc build in folder target/site/ -->
+				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.1.1</version>
+				<configuration>
+					<javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
 
 
 

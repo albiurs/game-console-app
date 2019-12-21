@@ -8,7 +8,7 @@
     <parent>
         <artifactId>games</artifactId>
         <groupId>ch.zhaw</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
 
 
