@@ -36,7 +36,7 @@ public class StartGameConsole {
 	// == public methods ==
 	@EventListener(ContextRefreshedEvent.class)
 	public void start() {
-		log.info("start() --> Container ready for use.");
+		log.info("-- start() method called - container ready to go --");
 
 		Scanner scanner = new Scanner(System.in);
 
@@ -44,10 +44,27 @@ public class StartGameConsole {
 		System.out.println("1 Game Of Life");
 		System.out.println("2 Guess Numbers");
 		System.out.println("3 Tic Tac Toe");
-		System.out.println("0 Exit Game Console");
-		int choice = scanner.nextInt();
+		System.out.println("x Exit Game Console");
+		String choice = scanner.next();
 		scanner.nextLine();
 
-		System.out.println("choice = " + choice);
+
+		switch (choice) {
+			case "1":
+				System.out.println("was 1");
+				break;
+			case "2":
+				System.out.println("was 2");
+				break;
+			case "3":
+				System.out.println("was 3");
+				break;
+			case "x":
+				System.out.println("was x");
+				break;
+			default:
+				System.out.println("Wrong input, try again...");
+		}
+
 	}
 }
