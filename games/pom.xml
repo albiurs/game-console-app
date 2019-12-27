@@ -34,6 +34,8 @@
         <module>tictactoe-core</module>
         <module>start-console</module>
         <module>start-core</module>
+        <module>start-gui</module>
+        <module>gameoflife-gui</module>
     </modules>
 
 

@@ -6,7 +6,7 @@
 
     <!-- Parent Module -->
     <parent>
-        <artifactId>game-console-app</artifactId>
+        <artifactId>games</artifactId>
         <groupId>ch.zhaw</groupId>
         <version>${revision}</version>
     </parent>
@@ -17,19 +17,20 @@
 
 
     <!-- Module Definitions -->
-    <artifactId>main</artifactId>
+    <artifactId>gameoflife-gui</artifactId>
 
 
-    <!-- Sub-modules -->
-    <modules>
-        <module>main-console</module>
-        <module>main-web</module>
-        <module>main-gui</module>
-    </modules>
+    <!-- Dependencies -->
+    <dependencies>
 
+        <!-- Transitive Dependency -->
+        <dependency>
+            <groupId>ch.zhaw</groupId>
+            <artifactId>gameoflife-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
-    <!-- POM Packaging - container of sub-modules -->
-    <packaging>pom</packaging>
+    </dependencies>
 
 
 </project>

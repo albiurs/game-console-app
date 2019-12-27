@@ -7,6 +7,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
+import java.io.Console;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -40,11 +41,11 @@ public class StartGameConsole {
 
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("Which game do you want play?");
-		System.out.println("1 Game Of Life");
-		System.out.println("2 Guess Numbers");
-		System.out.println("3 Tic Tac Toe");
-		System.out.println("x Exit Game Console");
+		System.out.println("Which game do you want play?\n" +
+				"1 Game Of Life\n" +
+				"2 Guess Numbers\n" +
+				"3 Tic Tac Toe\n" +
+				"q Quit");
 		String choice = scanner.next();
 		scanner.nextLine();
 
@@ -59,8 +60,8 @@ public class StartGameConsole {
 			case "3":
 				System.out.println("was 3");
 				break;
-			case "x":
-				System.out.println("was x");
+			case "q":
+				System.out.println("was q");
 				break;
 			default:
 				System.out.println("Wrong input, try again...");
