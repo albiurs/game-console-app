@@ -4,7 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 
-
     <!-- Parent Module -->
     <parent>
         <artifactId>games</artifactId>
@@ -18,7 +17,7 @@
 
 
     <!-- Module Definitions -->
-    <artifactId>start-gui</artifactId>
+    <artifactId>tictactoe-gui</artifactId>
 
 
     <!-- Dependencies -->
@@ -27,21 +26,7 @@
         <!-- Transitive Dependency -->
         <dependency>
             <groupId>ch.zhaw</groupId>
-            <artifactId>start-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <!-- Transitive Dependency -->
-        <dependency>
-            <groupId>ch.zhaw</groupId>
-            <artifactId>gameoflife-gui</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <!-- Transitive Dependency -->
-        <dependency>
-            <groupId>ch.zhaw</groupId>
-            <artifactId>tictactoe-gui</artifactId>
+            <artifactId>tictactoe-core</artifactId>
             <version>${project.version}</version>
         </dependency>
 

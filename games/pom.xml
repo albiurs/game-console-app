@@ -36,6 +36,7 @@
         <module>start-core</module>
         <module>start-gui</module>
         <module>gameoflife-gui</module>
+        <module>tictactoe-gui</module>
     </modules>
 
 
