@@ -1,4 +1,4 @@
-package ch.zhaw.gameconsoleapp;
+package ch.zhaw.gameconsoleapp.guessnumber.console;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,5 +21,9 @@ public class GuessNumberConsoleDummy {
 	@Autowired
 	public GuessNumberConsoleDummy() {
 		log.info("-- Constructor GuessNumberConsoleDummy() called --");
+	}
+
+	public void printMessage() {
+		System.out.println("GuessNumberConsoleDummy.printMessage() called");
 	}
 }
