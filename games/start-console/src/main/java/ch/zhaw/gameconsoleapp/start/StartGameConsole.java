@@ -1,5 +1,7 @@
 package ch.zhaw.gameconsoleapp.start;
 
+import ch.zhaw.gameconsoleapp.guessnumber.console.GuessNumberConsoleDummy;
+import ch.zhaw.gameconsoleapp.guessnumber.console.GuessNumberConsoleStart;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +9,6 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import java.io.Console;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 /**
@@ -25,12 +25,14 @@ public class StartGameConsole {
 
 
 	// == fields ==
+	public final GuessNumberConsoleStart guessNumberConsoleStart;
 
 
 	// == constructors ==
 	@Autowired
-	public StartGameConsole() {
+	public StartGameConsole(GuessNumberConsoleStart guessNumberConsoleStart) {
 		log.info("-- Constructor StartGameConsole() called --");
+		this.guessNumberConsoleStart = guessNumberConsoleStart;
 	}
 
 
@@ -52,16 +54,17 @@ public class StartGameConsole {
 
 		switch (choice) {
 			case "1":
-				System.out.println("was 1");
+				System.out.println("Game Of Life was chosen");
 				break;
 			case "2":
-				System.out.println("was 2");
+				System.out.println("Guess Numbers was chosen");
+				guessNumberConsoleStart.printMessage();
 				break;
 			case "3":
-				System.out.println("was 3");
+				System.out.println("Tic Tac Toe was chosen");
 				break;
 			case "q":
-				System.out.println("was q");
+				System.out.println("Quit...");
 				break;
 			default:
 				System.out.println("Wrong input, try again...");
