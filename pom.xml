@@ -31,9 +31,11 @@
 
 		<!-- Project Version/Revision -->
 		<revision>0.1.0-SNAPSHOT</revision>
-
+		<!--Spring version-->
+		<spring.version>5.2.2.RELEASE</spring.version>
 		<!-- Java Version -->
 		<java.version>11</java.version>
+		<openjfx.version>11</openjfx.version>
 
 	</properties>
 
@@ -79,6 +81,26 @@
 <!--			<artifactId>maven-javadoc-plugin</artifactId>-->
 <!--			<version>3.1.1</version>-->
 <!--		</dependency>-->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>${openjfx.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-media</artifactId>
+			<version>${openjfx.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-graphics</artifactId>
+			<version>${openjfx.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>${openjfx.version}</version>
+		</dependency>
 
 	</dependencies>
 
@@ -88,18 +110,17 @@
 
 		<!-- Plugins -->
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<target>${java.version}</target>
+					<source>${java.version}</source>
+					<release>${java.version}</release>
+				</configuration>
+			</plugin>
 
-<!--			<plugin>-->
-<!--				&lt;!&ndash; Apache Maven Javadoc Plugin &ndash;&gt;-->
-<!--				&lt;!&ndash; Call "mvn javadoc:javadoc" for automatic html Javadoc build in folder target/site/ &ndash;&gt;-->
-<!--				&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin &ndash;&gt;-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-javadoc-plugin</artifactId>-->
-<!--				<version>3.1.1</version>-->
-<!--				<configuration>-->
-<!--					<javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
 
 		</plugins>
 

@@ -30,13 +30,11 @@
         <module>gameoflife-core</module>
         <module>guessnumber-console</module>
         <module>guessnumber-core</module>
-        <module>tictactoe-console</module>
-        <module>tictactoe-core</module>
+        <module>TTT-GameBoard</module>
         <module>start-console</module>
         <module>start-core</module>
         <module>start-gui</module>
         <module>gameoflife-gui</module>
-        <module>tictactoe-gui</module>
         <module>TTT-GameBoard</module>
     </modules>
 
