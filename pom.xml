@@ -35,7 +35,7 @@
 		<spring.version>5.2.2.RELEASE</spring.version>
 		<!-- Java Version -->
 		<java.version>11</java.version>
-		<openjfx.version>11</openjfx.version>
+		<openjfx.version>11.0.2</openjfx.version>
 
 	</properties>
 
@@ -44,10 +44,16 @@
 	<modules>
 		<module>main</module>
 		<module>games</module>
-        <module>GameBoardController</module>
-		<module>TTT-GameLogic</module>
-		<module>TTT-GameLogic</module>
-		<module>TTT-GameGui</module>
+        <module>games/TTT-GameBoard</module>
+		<module>games/gameoflife-console</module>
+		<module>games/gameoflife-core</module>
+		<module>games/gameoflife-gui</module>
+		<module>games/guessnumber-console</module>
+		<module>games/guessnumber-core</module>
+		<module>games/start-gui</module>
+		<module>games/start-core</module>
+		<module>games/start-console</module>
+
 	</modules>
 
 
