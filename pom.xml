@@ -87,6 +87,8 @@
 <!--			<artifactId>maven-javadoc-plugin</artifactId>-->
 <!--			<version>3.1.1</version>-->
 <!--		</dependency>-->
+
+		<!--javafx implementation-->
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>
