@@ -47,7 +47,7 @@
         <!-- Transitive Dependency -->
         <dependency>
             <groupId>ch.zhaw</groupId>
-            <artifactId>tictactoe-console</artifactId>
+            <artifactId>TTT-GameBoard</artifactId>
             <version>${project.version}</version>
         </dependency>
 

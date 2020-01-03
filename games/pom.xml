@@ -35,7 +35,6 @@
         <module>start-core</module>
         <module>start-gui</module>
         <module>gameoflife-gui</module>
-        <module>TTT-GameBoard</module>
     </modules>
 
 
