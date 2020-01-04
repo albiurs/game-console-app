@@ -17,7 +17,7 @@ public class GuessNumberConsoleStart {
 
 
 	// == constants ==
-	private static final Logger log = LoggerFactory.getLogger(GuessNumberConsoleDummy.class);	// Initialization of Slf4j logger
+	private static final Logger log = LoggerFactory.getLogger(GuessNumberConsoleStart.class);	// Initialization of Slf4j logger
 
 
 	// == constructors ==
@@ -26,6 +26,8 @@ public class GuessNumberConsoleStart {
 		log.info("-- Constructor GuessNumberConsoleStart() called --");
 	}
 
+
+	// == public methods ==
 	public void printMessage() {
 		System.out.println("GuessNumberConsoleStart.printMessage() called");
 	}
