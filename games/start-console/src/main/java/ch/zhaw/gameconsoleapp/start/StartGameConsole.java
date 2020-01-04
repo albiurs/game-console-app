@@ -1,6 +1,5 @@
 package ch.zhaw.gameconsoleapp.start;
 
-import ch.zhaw.gameconsoleapp.guessnumber.console.GuessNumberConsoleDummy;
 import ch.zhaw.gameconsoleapp.guessnumber.console.GuessNumberConsoleStart;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
