@@ -14,7 +14,7 @@ import java.util.Random;
  * Implementation of the NumberCalculator Service, generating and/or returning random, max and min number.
  *
  * @author created by Urs Albisser, on 2020-01-04
- * @version 0.0.1
+ * @version 1.0
  */
 @Service
 public class NumberCalculatorImpl implements NumberCalculator {
@@ -67,7 +67,6 @@ public class NumberCalculatorImpl implements NumberCalculator {
 
 
 	// == public methods ==
-
 	/**
 	 * nextRandomInt()
 	 * Calculation of a random int value.

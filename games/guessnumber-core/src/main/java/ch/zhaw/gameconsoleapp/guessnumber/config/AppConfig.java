@@ -6,9 +6,10 @@ import org.springframework.context.annotation.Import;
 
 /**
  * AppConfig
+ * Overall application configuration class.
  *
  * @author created by Urs Albisser, on 2020-01-04
- * @version 0.0.1
+ * @version 1.0
  */
 @Configuration                // Configures this class as a config class
 @Import(GameConfig.class)	// Import GameConfig.class modularize configuration

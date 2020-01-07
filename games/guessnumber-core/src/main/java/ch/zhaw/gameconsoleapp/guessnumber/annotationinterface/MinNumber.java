@@ -25,9 +25,8 @@ import java.lang.annotation.Target;
  * atQualifier
  * The Spring annotation, used to annotate other custom annotations, that can in turn be used as qualifiers.
  *
- *
  * @author created by Urs Albisser, on 2020-01-04
- * @version 0.0.1
+ * @version 1.0
  */
 @Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

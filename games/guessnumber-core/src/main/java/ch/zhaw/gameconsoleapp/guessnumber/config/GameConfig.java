@@ -11,14 +11,14 @@ import org.springframework.context.annotation.PropertySource;
 
 /**
  * GameConfig
- * Configuration class for the Guess Number Game.
+ * Configuration class for the Guess Number Game's specific parameters.
  *
  * atConfiguration		Spring-managed configuration class
  * atComponentScan		basePackage to be scanned for Spring Components
  * atPropertySource		classpath to be scanned for game property files
  *
  * @author created by Urs Albisser, on 2020-01-04
- * @version 0.0.1
+ * @version 1.0
  */
 @Configuration
 @ComponentScan(basePackages = "ch.zhaw.gameconsoleapp.guessnumber")
@@ -29,7 +29,7 @@ public class GameConfig {
 	@Value("${game.maxNumber:20}")
 	private int maxNumber;
 
-	@Value("${game.guessCount:5}")
+	@Value("${game.guessCount:7}")
 	private int DefaultMaxGuessCount;
 
 	@Value("${game.minNumber:5}")
@@ -37,7 +37,6 @@ public class GameConfig {
 
 
 	// == public bean methods ==
-
 	/**
 	 * maxNumber()
 	 * @return	Maximum number in range.
