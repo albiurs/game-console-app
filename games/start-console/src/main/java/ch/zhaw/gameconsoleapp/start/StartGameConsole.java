@@ -45,9 +45,9 @@ public class StartGameConsole {
 		while(true) {
 
 			System.out.println("Which game do you want play?\n" +
-					"1 Game Of Life\n" +
-					"2 Guess Numbers\n" +
-					"3 Tic Tac Toe\n" +
+					"1 not implemented yet\n" +
+					"2 Guess Number Game\n" +
+					"3 not implemented yet\n" +
 					"q Quit");
 			String choice = scanner.nextLine().trim();
 //			scanner.nextLine();
