@@ -3,7 +3,9 @@ package ch.zhaw.gameconsoleapp.guessnumber.service;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,11 +15,19 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author created by Urs Albisser, on 2020-01-04
  * @version 0.0.1
  */
-class NumberCalculatorTest {
+@ExtendWith(SpringExtension.class)
+//@ExtendWith(MockitoExtension.class)		// JUnit 5: required for @InjectMocks and @Mock
+//@SpringBootTest(classes = NumberCalculator.class)
+public class NumberCalculatorTest {
 
-	@Autowired
-	NumberCalculator numberCalculator;
 
+	// == fields ==
+	@InjectMocks
+	private NumberCalculatorImpl numberCalculatorImpl;
+//	private NumberCalculatorImpl numberCalculatorImpl = new NumberCalculatorImpl(100, 0);
+
+
+	// == setup & teardown ==
 	@BeforeEach
 	void setUp() {
 	}
@@ -26,16 +36,28 @@ class NumberCalculatorTest {
 	void tearDown() {
 	}
 
+
+	// == JUnit tests ==
 	@Test
 	void nextRandomInt() {
+
+		int randomInt = numberCalculatorImpl.nextRandomInt();
+		int minInt = numberCalculatorImpl.getMinNumber();
+		int maxInt = numberCalculatorImpl.getMaxNumber();
+		System.out.println("nextRandomInt() is: " + randomInt);
+		assertTrue((minInt <= randomInt) && (randomInt <= maxInt),
+				"nextRandomInt() is out of range: " + randomInt);
 	}
 
 	@Test
 	void getMaxNumber() {
-//		assertEquals(5, numberCalculator.getMaxNumber(), 0);
+		System.out.println("getMaxNumber() is: " + numberCalculatorImpl.getMaxNumber());
+		assertEquals(100, numberCalculatorImpl.getMaxNumber(), 0);
 	}
 
 	@Test
 	void getMinNumber() {
+		System.out.println("getMinNumber() is: " + numberCalculatorImpl.getMinNumber());
+		assertEquals(0, numberCalculatorImpl.getMinNumber(), 0);
 	}
 }

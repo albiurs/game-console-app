@@ -52,6 +52,20 @@ public class NumberCalculatorImpl implements NumberCalculator {
 	}
 
 
+	/**
+	 * NumberCalculatorImpl()
+	 * Default Constructor required for JUnit tests
+	 */
+	public NumberCalculatorImpl() {
+
+		this.maxNumber = 100;
+		log.info("Constructor NumberCalculatorImpl() called. Initialized maxNumber = {}", maxNumber);
+		this.minNumber = 0;
+		log.info("Constructor NumberCalculatorImpl() called. Initialized minNumber = {}", minNumber);
+
+	}
+
+
 	// == public methods ==
 
 	/**
