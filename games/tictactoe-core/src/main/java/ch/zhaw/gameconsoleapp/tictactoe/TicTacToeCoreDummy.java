@@ -1,4 +1,4 @@
-package ch.zhaw.gameconsoleapp;
+package ch.zhaw.gameconsoleapp.tictactoe;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
