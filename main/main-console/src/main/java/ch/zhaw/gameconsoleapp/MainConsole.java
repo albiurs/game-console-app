@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * atSpringBootApplication: Enables automatic bean-scanning of it's current package and all sub-packages (ch.zhaw/** (in all Modules)).
  *
  * @author created by Urs Albisser, on 2019-12-04
- * @version 0.0.1
+ * @version 1.0
  */
 @SpringBootApplication
 public class MainConsole {
@@ -38,7 +38,5 @@ public class MainConsole {
 		log.info("SpringApplication.run() initiated");
 		SpringApplication.run(MainConsole.class, args);
 		log.info("SpringApplication.run() terminated");
-
 	}
-
 }

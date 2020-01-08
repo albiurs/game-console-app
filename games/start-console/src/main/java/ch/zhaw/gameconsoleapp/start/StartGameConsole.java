@@ -14,7 +14,7 @@ import java.util.Scanner;
  * StartGameConsole
  *
  * @author created by Urs Albisser, on 2019-12-23
- * @version 0.0.1
+ * @version 1.0
  */
 @Component
 public class StartGameConsole {
@@ -42,32 +42,37 @@ public class StartGameConsole {
 
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("Which game do you want play?\n" +
-				"1 Game Of Life\n" +
-				"2 Guess Numbers\n" +
-				"3 Tic Tac Toe\n" +
-				"q Quit");
-		String choice = scanner.next();
-		scanner.nextLine();
+		while(true) {
 
+			System.out.println("Which game do you want play?\n" +
+					"1 not implemented yet\n" +
+					"2 Guess Number Game\n" +
+					"3 not implemented yet\n" +
+					"q Quit");
+			String choice = scanner.nextLine().trim();
+//			scanner.nextLine();
 
-		switch (choice) {
-			case "1":
-				System.out.println("Game Of Life was chosen");
-				break;
-			case "2":
-				System.out.println("Guess Numbers was chosen");
-				guessNumberConsoleStart.printMessage();
-				break;
-			case "3":
-				System.out.println("Tic Tac Toe was chosen");
-				break;
-			case "q":
-				System.out.println("Quit...");
-				break;
-			default:
-				System.out.println("Wrong input, try again...");
+			switch (choice) {
+				case "1":
+					System.out.println("Game Of Life was chosen");
+					break;
+				case "2":
+					System.out.println("Guess Numbers was chosen");
+					guessNumberConsoleStart.startGame();
+					break;
+				case "3":
+					System.out.println("Tic Tac Toe was chosen");
+					break;
+				case "q":
+					System.out.println("Quit...");
+					break;
+				default:
+					System.out.println("Wrong input, try again...");
+			}
+
+			if (choice.contentEquals("q")) {
+				break; // break out of while loop
+			}
 		}
-
 	}
 }
