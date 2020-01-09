@@ -42,17 +42,17 @@ public class TicTacToeGame {
 
         while(true){
             Scanner scan = new Scanner(System.in);
-            System.out.println("Wähle von 1-9 aus wo dein X hingeht");
+            System.out.println("Choose from 1-9 where you want to put your X");
             int playerPos = scan.nextInt();
             /**
              * the while loop checks if the position is already taken by either the player or the computer
              * so you cannot override the symbole of your counterpart will be repeated for the computer at line 62
              */
             while  (playerPosition.contains(playerPos) || computerPosition.contains(playerPosition)){
-                System.out.println("Position besetzt, bitte wähle eine andere");
+                System.out.println("Position taken, take another");
                 playerPos = scan.nextInt();
             }
-            placePiece(table,playerPos,"Spieler");
+            placePiece(table,playerPos,"Player");
             String result = checkWinner();
             if(result.length() > 0){
                 System.out.println(result);
@@ -93,7 +93,7 @@ public class TicTacToeGame {
 
         char symbol = ' ';
 
-        if(User.equals("Spieler")){
+        if(User.equals("Player")){
             symbol = 'X';
             playerPosition.add(pos);
         }else if(User.equals("Computer")){
@@ -166,11 +166,11 @@ public class TicTacToeGame {
         //output of the message after one of the winning condition is right
         for(List l : winningConditions){
             if(playerPosition.containsAll(l)) {
-                return "Du hast gewonnen";
+                return "Congrats, you've Won";
             }else if(computerPosition.containsAll(l)){
-                return " Schade, du hast verloren";
+                return " Too bad, you've lost";
             }else if(playerPosition.size() + computerPosition.size() == 9){
-                return " Unentschieden";
+                return " Tie";
             }
         }
         return"";
