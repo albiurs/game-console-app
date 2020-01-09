@@ -26,8 +26,9 @@ public class TicTacToeGame {
     public static void startTtt() {
 
         log.info("-- startTtt() called, game starts up --");
+        /*the gameboard is initialized with char and filled with the following symboles,
+        so it looks like a board in the output*/
 
-        //das Spielbrett wird mit char initialisiert und mit den Sybolen befüllt, damit es nach einem Spielbrett bei der ausgabe  aussieht
         char[][] table ={{'1', '|','2','|','3'},
                 {'-', '+','-','+','-'},
                 {'4', '|','5','|','6'},
@@ -41,7 +42,9 @@ public class TicTacToeGame {
             Scanner scan = new Scanner(System.in);
             System.out.println("Wähle von 1-9 aus wo dein X hingeht");
             int playerPos = scan.nextInt();
-            //check damit das Feld nicht doppelt besetzt werden kann
+            /*the while loop checks if the position is already taken by either the player or the computer
+            so you cannot override the symbole of your counterpart will be repeated for the computer at line 62
+             */
             while  (playerPosition.contains(playerPos) || computerPosition.contains(playerPosition)){
                 System.out.println("Position besetzt, bitte wähle eine andere");
                 playerPos = scan.nextInt();
@@ -53,10 +56,9 @@ public class TicTacToeGame {
                 break;
             }
 
-            //zufallsgenerator um ein Spielstein zu legen (Computer)
+            //randomizes where the computer will put a O on the board
             Random rand = new Random();
             int computerPos = rand.nextInt(9)+1;
-            //check damit das Feld nicht doppelt besetzt werden kann
             while  (playerPosition.contains(computerPos) || computerPosition.contains(computerPos)) {
                 computerPos = rand.nextInt(9)+1;
             }
@@ -73,7 +75,7 @@ public class TicTacToeGame {
         }
     }
 
-    //Ausgabe des Spielbretts im Terminal
+    //Output for the board in the console
     public static void createGameBoard(char[][] table){
         for(char[] row : table){
             for(char c : row){
@@ -83,7 +85,7 @@ public class TicTacToeGame {
         }
     }
 
-    //Spielbrettbelegung
+    //this code is for alternating between the player and the computer
     public static void placePiece(char[][] table, int pos, String User) {
 
         char symbol = ' ';
@@ -96,6 +98,8 @@ public class TicTacToeGame {
             computerPosition.add(pos);
         }
 
+        /*the switch case is for determing  where
+         in the array the symbole of the player or cpu should be stored*/
         switch(pos){
             case 1:
                 table[0][0] = symbol;
@@ -129,10 +133,12 @@ public class TicTacToeGame {
         }
     }
 
-    //gewinnkonditionencheck
+    //win condition check
     public static String checkWinner(){
-        //check ob eine gewinnkondition gegeben ist,
-        // indem es schaut ob es diesselben symbole in den pos hat
+
+        /* checks for the win condition with a comparison of
+        the symbole in the position of the array
+         */
         List topRow = Arrays.asList(1,2,3);
         List middleRow = Arrays.asList(4,5,6);
         List bottomRow = Arrays.asList(7,8,9);
@@ -152,6 +158,7 @@ public class TicTacToeGame {
         winningConditions.add(uplLeftRightBottom);
         winningConditions.add(upRightLeftBottom);
 
+        //output of the message after one of the winning condition is right
         for(List l : winningConditions){
             if(playerPosition.containsAll(l)) {
                 return "Du hast gewonnen";
