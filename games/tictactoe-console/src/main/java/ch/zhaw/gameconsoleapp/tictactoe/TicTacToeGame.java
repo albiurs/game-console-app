@@ -97,7 +97,7 @@ public class TicTacToeGame {
             symbol = 'X';
             playerPosition.add(pos);
         }else if(User.equals("Computer")){
-            symbol ='0';
+            symbol ='O';
             computerPosition.add(pos);
         }
 
