@@ -37,6 +37,7 @@
         <module>start-gui</module>
         <module>gameoflife-gui</module>
         <module>tictactoe-gui</module>
+        <module>random-joke-crawler</module>
     </modules>
 
 
