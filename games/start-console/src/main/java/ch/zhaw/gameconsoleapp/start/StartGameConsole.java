@@ -1,6 +1,7 @@
 package ch.zhaw.gameconsoleapp.start;
 
 import ch.zhaw.gameconsoleapp.guessnumber.console.GuessNumberConsoleStart;
+import ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +25,15 @@ public class StartGameConsole {
 
 
 	// == fields ==
-	public final GuessNumberConsoleStart guessNumberConsoleStart;
+	private final TicTacToeGame ticTacToeGame;
+	private final GuessNumberConsoleStart guessNumberConsoleStart;
 
 
 	// == constructors ==
 	@Autowired
-	public StartGameConsole(GuessNumberConsoleStart guessNumberConsoleStart) {
+	public StartGameConsole(GuessNumberConsoleStart guessNumberConsoleStart, TicTacToeGame ticTacToeGame) {
 		log.info("-- Constructor StartGameConsole() called --");
+		this.ticTacToeGame = ticTacToeGame;
 		this.guessNumberConsoleStart = guessNumberConsoleStart;
 	}
 
@@ -45,7 +48,7 @@ public class StartGameConsole {
 		while(true) {
 
 			System.out.println("Which game do you want play?\n" +
-					"1 not implemented yet\n" +
+					"1 Tic-Tac-Toe\n" +
 					"2 Guess Number Game\n" +
 					"3 not implemented yet\n" +
 					"q Quit");
@@ -54,14 +57,15 @@ public class StartGameConsole {
 
 			switch (choice) {
 				case "1":
-					System.out.println("Game Of Life was chosen");
+					System.out.println("Tic Tac Toe was chosen");
+					ticTacToeGame.startTtt();
 					break;
 				case "2":
 					System.out.println("Guess Numbers was chosen");
 					guessNumberConsoleStart.startGame();
 					break;
 				case "3":
-					System.out.println("Tic Tac Toe was chosen");
+					System.out.println("3 was chosen");
 					break;
 				case "q":
 					System.out.println("Quit...");

@@ -1,12 +1,32 @@
 package ch.zhaw.gameconsoleapp.tictactoe;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
 import java.util.*;
 
-public class tttgame {
+/**
+ * TicTacToeGame
+ *
+ * @author created by Danian Kiarostami, on 2020-01-09
+ * @version
+ */
+@Component
+public class TicTacToeGame {
 
-    static ArrayList<Integer> playerPosition = new ArrayList<Integer>();
-    static ArrayList<Integer> computerPosition = new ArrayList<Integer>();
-    public static void main(String[] args) {
+    // == constants ==
+    private static final Logger log = LoggerFactory.getLogger(TicTacToeGame.class);	// Initialization of Slf4j logger
+
+    // == fields ==
+    private static ArrayList<Integer> playerPosition = new ArrayList<Integer>();
+    private static ArrayList<Integer> computerPosition = new ArrayList<Integer>();
+
+    // == public methods ==
+    public static void startTtt() {
+
+        log.info("-- startTtt() called, game starts up --");
+
         //das Spielbrett wird mit char initialisiert und mit den Sybolen befüllt, damit es nach einem Spielbrett bei der ausgabe  aussieht
         char[][] table ={{'1', '|','2','|','3'},
                 {'-', '+','-','+','-'},
@@ -52,8 +72,6 @@ public class tttgame {
             }
         }
     }
-
-    //==methods==
 
     //Ausgabe des Spielbretts im Terminal
     public static void createGameBoard(char[][] table){
@@ -110,6 +128,7 @@ public class tttgame {
                 break;
         }
     }
+
     //gewinnkonditionencheck
     public static String checkWinner(){
         //check ob eine gewinnkondition gegeben ist,
