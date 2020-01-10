@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * NumberCalculatorTest
  *
  * @author created by Urs Albisser, on 2020-01-04
- * @version 0.0.1
+ * @version 1.0
  */
 @ExtendWith(SpringExtension.class)
 //@ExtendWith(MockitoExtension.class)		// JUnit 5: required for @InjectMocks and @Mock
@@ -45,8 +45,11 @@ public class NumberCalculatorTest {
 		int minInt = numberCalculatorImpl.getMinNumber();
 		int maxInt = numberCalculatorImpl.getMaxNumber();
 		System.out.println("nextRandomInt() is: " + randomInt);
-		assertTrue((minInt <= randomInt) && (randomInt <= maxInt),
-				"nextRandomInt() is out of range: " + randomInt);
+		for(int i=0; i<10000; i++) {
+			assertTrue((minInt <= randomInt) && (randomInt <= maxInt),
+					"nextRandomInt() is out of range: " + randomInt);
+			assertTrue(!(minInt < randomInt) || !(randomInt > maxInt));
+		}
 	}
 
 	@Test
