@@ -41,15 +41,22 @@ public class NumberCalculatorTest {
 	@Test
 	void nextRandomInt() {
 
-		int randomInt = numberCalculatorImpl.nextRandomInt();
 		int minInt = numberCalculatorImpl.getMinNumber();
 		int maxInt = numberCalculatorImpl.getMaxNumber();
-		System.out.println("nextRandomInt() is: " + randomInt);
+
 		for(int i=0; i<10000; i++) {
+			int randomInt = numberCalculatorImpl.nextRandomInt();
+			System.out.println("nextRandomInt() is: " + randomInt);
+
 			assertTrue((minInt <= randomInt) && (randomInt <= maxInt),
 					"nextRandomInt() is out of range: " + randomInt);
 			assertTrue(!(minInt < randomInt) || !(randomInt > maxInt));
 		}
+
+
+
+
+
 	}
 
 	@Test
