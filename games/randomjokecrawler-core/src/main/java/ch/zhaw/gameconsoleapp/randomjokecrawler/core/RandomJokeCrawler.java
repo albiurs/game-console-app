@@ -1,4 +1,4 @@
-package ch.zhaw.gameconsoleapp.randomjokecrawler;
+package ch.zhaw.gameconsoleapp.randomjokecrawler.core;
 
 import com.afrunt.randomjoke.Jokes;
 import org.slf4j.Logger;
@@ -8,9 +8,11 @@ import org.springframework.stereotype.Component;
 
 /**
  * RandomJokeCrawler
+ * Core logic of the Random Joke Crawler app. This class uses the random-joke-crawler dependency to grasp a random
+ * joke from online joke resources.
  *
  * @author created by Urs Albisser, on 2020-01-09
- * @version 0.1
+ * @version 1.0
  */
 @Component
 public class RandomJokeCrawler {
@@ -24,6 +26,11 @@ public class RandomJokeCrawler {
 
 
 	// == constructors ==
+
+	/**
+	 * RandomJokeCrawler()
+	 * Constructor initializing a new instance of the dependencies Jokes class.
+	 */
 	@Autowired
 	public RandomJokeCrawler() {
 		this.jokes = new Jokes().withDefaultSuppliers();
@@ -31,10 +38,11 @@ public class RandomJokeCrawler {
 
 
 	// == public methods ==
-	public void startRandomJokeCrawler() {
-
-//		Jokes jokes = new Jokes()
-//				.withDefaultSuppliers();
+	/**
+	 * getRandomJoke()
+	 * Grasp a new random joke from one of the dependencies's online joke resources.
+	 */
+	public void getRandomJoke() {
 
 		jokes.randomJoke().ifPresent(joke -> System.out.println(joke.getText()));
 	}

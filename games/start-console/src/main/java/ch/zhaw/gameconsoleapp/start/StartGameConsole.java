@@ -1,7 +1,7 @@
 package ch.zhaw.gameconsoleapp.start;
 
 import ch.zhaw.gameconsoleapp.guessnumber.console.GuessNumberConsoleStart;
-import ch.zhaw.gameconsoleapp.randomjokecrawler.RandomJokeCrawler;
+import ch.zhaw.gameconsoleapp.randomjokecrawler.console.controller.RandomJokeController;
 import ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +16,7 @@ import java.util.Scanner;
  * StartGameConsole
  *
  * @author created by Urs Albisser, on 2019-12-23
- * @version 1.0
+ * @version 1.0.1
  */
 @Component
 public class StartGameConsole {
@@ -28,22 +28,39 @@ public class StartGameConsole {
 	// == fields ==
 	private final TicTacToeGame ticTacToeGame;
 	private final GuessNumberConsoleStart guessNumberConsoleStart;
-	private final RandomJokeCrawler randomJokeCrawler;
+	private final RandomJokeController randomJokeController;
 
 
 	// == constructors ==
+	/**
+	 * StartGameConsole()
+	 * Constructor, initializing the fields
+	 *
+	 * @param guessNumberConsoleStart GuessNumberConsoleStart instance
+	 * @param ticTacToeGame TicTacToeGame instance
+	 * @param randomJokeController RandomJokeController instance
+	 */
 	@Autowired
 	public StartGameConsole(GuessNumberConsoleStart guessNumberConsoleStart,
 							TicTacToeGame ticTacToeGame,
-							RandomJokeCrawler randomJokeCrawler) {
+							RandomJokeController randomJokeController) {
 		log.info("-- Constructor StartGameConsole() called --");
 		this.ticTacToeGame = ticTacToeGame;
 		this.guessNumberConsoleStart = guessNumberConsoleStart;
-		this.randomJokeCrawler = randomJokeCrawler;
+		this.randomJokeController = randomJokeController;
 	}
 
 
 	// == public methods ==
+
+	/**
+	 * start()
+	 * Start method, booting up the main menu for picking a game to play.
+	 *
+	 * atEventListener Listens the event of the Spring Context to be refreshed and therefore waiting until the
+	 * whole Spring Boot application has completely booted, before executing the start() method.
+	 * Choosing "Quit", will completely shut down the whole console app.
+	 */
 	@EventListener(ContextRefreshedEvent.class)
 	public void start() {
 		log.info("-- start() method called - container ready to go --");
@@ -71,7 +88,7 @@ public class StartGameConsole {
 					break;
 				case "3":
 					log.info("Random Joke was chosen");
-					randomJokeCrawler.startRandomJokeCrawler();
+					randomJokeController.startRandomJokeCrawler();
 					break;
 				case "q":
 					log.info("Quit was chosen");
