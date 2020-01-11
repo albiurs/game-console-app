@@ -1,6 +1,7 @@
 package ch.zhaw.gameconsoleapp.start;
 
 import ch.zhaw.gameconsoleapp.guessnumber.console.GuessNumberConsoleStart;
+import ch.zhaw.gameconsoleapp.randomjokecrawler.RandomJokeCrawler;
 import ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,14 +28,18 @@ public class StartGameConsole {
 	// == fields ==
 	private final TicTacToeGame ticTacToeGame;
 	private final GuessNumberConsoleStart guessNumberConsoleStart;
+	private final RandomJokeCrawler randomJokeCrawler;
 
 
 	// == constructors ==
 	@Autowired
-	public StartGameConsole(GuessNumberConsoleStart guessNumberConsoleStart, TicTacToeGame ticTacToeGame) {
+	public StartGameConsole(GuessNumberConsoleStart guessNumberConsoleStart,
+							TicTacToeGame ticTacToeGame,
+							RandomJokeCrawler randomJokeCrawler) {
 		log.info("-- Constructor StartGameConsole() called --");
 		this.ticTacToeGame = ticTacToeGame;
 		this.guessNumberConsoleStart = guessNumberConsoleStart;
+		this.randomJokeCrawler = randomJokeCrawler;
 	}
 
 
@@ -50,27 +55,30 @@ public class StartGameConsole {
 			System.out.println("Which game do you want play?\n" +
 					"1 Tic-Tac-Toe\n" +
 					"2 Guess Number Game\n" +
-					"3 not implemented yet\n" +
+					"3 Random Joke :-)\n" +
 					"q Quit");
 			String choice = scanner.nextLine().trim();
 //			scanner.nextLine();
 
 			switch (choice) {
 				case "1":
-					System.out.println("Tic Tac Toe was chosen");
+					log.info("Tic Tac Toe was chosen");
 					ticTacToeGame.startTtt();
 					break;
 				case "2":
-					System.out.println("Guess Numbers was chosen");
+					log.info("Guess Numbers was chosen");
 					guessNumberConsoleStart.startGame();
 					break;
 				case "3":
-					System.out.println("3 was chosen");
+					log.info("Random Joke was chosen");
+					randomJokeCrawler.startRandomJokeCrawler();
 					break;
 				case "q":
+					log.info("Quit was chosen");
 					System.out.println("Quit...");
 					break;
 				default:
+					log.info("Invalid user input. Default case gets executed.");
 					System.out.println("Wrong input, try again...");
 			}
 

@@ -38,6 +38,8 @@
         <module>gameoflife-gui</module>
         <module>tictactoe-gui</module>
         <module>random-joke-crawler</module>
+        <module>randomjokecrawler-core</module>
+        <module>randomejokecrawler-console</module>
     </modules>
 
 

@@ -51,6 +51,13 @@
             <version>${project.version}</version>
         </dependency>
 
+        <!-- Transitive Dependency -->
+        <dependency>
+            <groupId>ch.zhaw</groupId>
+            <artifactId>randomejokecrawler-console</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
     </dependencies>
 
 
