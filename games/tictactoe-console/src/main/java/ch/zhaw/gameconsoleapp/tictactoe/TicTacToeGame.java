@@ -19,10 +19,13 @@ public class TicTacToeGame {
     private static final Logger log = LoggerFactory.getLogger(TicTacToeGame.class);	// Initialization of Slf4j logger
 
     // == fields ==
+    //Arraylist of integers of player and computerpositions
     private static ArrayList<Integer> playerPosition = new ArrayList<Integer>();
     private static ArrayList<Integer> computerPosition = new ArrayList<Integer>();
 
     // == public methods ==
+
+
     public static void startTtt() {
 
         log.info("-- startTtt() called, game starts up --");
@@ -38,7 +41,6 @@ public class TicTacToeGame {
                 {'7', '|','8','|','9'}};
 
         createGameBoard(table);
-
 
         while(true){
             Scanner scan = new Scanner(System.in);
@@ -78,7 +80,10 @@ public class TicTacToeGame {
         }
     }
 
-    // Output for the board in the console
+    /**
+     * Method is used for console output of array table
+     * @param table
+     */
     public static void createGameBoard(char[][] table){
         for(char[] row : table){
             for(char c : row){
@@ -89,6 +94,13 @@ public class TicTacToeGame {
     }
 
     //this code is for alternating between the player and the computer
+
+    /**
+     * The method changes between players for the input into the ttt array
+     * @param table
+     * @param pos
+     * @param User
+     */
     public static void placePiece(char[][] table, int pos, String User) {
 
         char symbol = ' ';
@@ -138,12 +150,15 @@ public class TicTacToeGame {
         }
     }
 
-    //win condition check
+
+
+    /**
+     * The method checks for the winning conditions, this means the positions which are defined,
+     * are all occupied by either player or computer generates the winning message
+     * @return
+     */
     public static String checkWinner(){
 
-        /** checks for the win condition with a comparison of
-         * the symbole in the position of the array
-         */
         List topRow = Arrays.asList(1,2,3);
         List middleRow = Arrays.asList(4,5,6);
         List bottomRow = Arrays.asList(7,8,9);
@@ -163,7 +178,7 @@ public class TicTacToeGame {
         winningConditions.add(uplLeftRightBottom);
         winningConditions.add(upRightLeftBottom);
 
-        //output of the message after one of the winning condition is right
+        //output of the message after one of the winning condition is right for the list
         for(List l : winningConditions){
             if(playerPosition.containsAll(l)) {
                 return "Congrats, you've Won";
