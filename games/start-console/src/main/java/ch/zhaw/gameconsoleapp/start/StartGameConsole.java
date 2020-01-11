@@ -1,6 +1,7 @@
 package ch.zhaw.gameconsoleapp.start;
 
 import ch.zhaw.gameconsoleapp.guessnumber.console.GuessNumberConsoleStart;
+import ch.zhaw.gameconsoleapp.randomjokecrawler.console.controller.RandomJokeController;
 import ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +16,7 @@ import java.util.Scanner;
  * StartGameConsole
  *
  * @author created by Urs Albisser, on 2019-12-23
- * @version 1.0
+ * @version 1.0.1
  */
 @Component
 public class StartGameConsole {
@@ -27,18 +28,39 @@ public class StartGameConsole {
 	// == fields ==
 	private final TicTacToeGame ticTacToeGame;
 	private final GuessNumberConsoleStart guessNumberConsoleStart;
+	private final RandomJokeController randomJokeController;
 
 
 	// == constructors ==
+	/**
+	 * StartGameConsole()
+	 * Constructor, initializing the fields
+	 *
+	 * @param guessNumberConsoleStart GuessNumberConsoleStart instance
+	 * @param ticTacToeGame TicTacToeGame instance
+	 * @param randomJokeController RandomJokeController instance
+	 */
 	@Autowired
-	public StartGameConsole(GuessNumberConsoleStart guessNumberConsoleStart, TicTacToeGame ticTacToeGame) {
+	public StartGameConsole(GuessNumberConsoleStart guessNumberConsoleStart,
+							TicTacToeGame ticTacToeGame,
+							RandomJokeController randomJokeController) {
 		log.info("-- Constructor StartGameConsole() called --");
 		this.ticTacToeGame = ticTacToeGame;
 		this.guessNumberConsoleStart = guessNumberConsoleStart;
+		this.randomJokeController = randomJokeController;
 	}
 
 
 	// == public methods ==
+
+	/**
+	 * start()
+	 * Start method, booting up the main menu for picking a game to play.
+	 *
+	 * atEventListener Listens the event of the Spring Context to be refreshed and therefore waiting until the
+	 * whole Spring Boot application has completely booted, before executing the start() method.
+	 * Choosing "Quit", will completely shut down the whole console app.
+	 */
 	@EventListener(ContextRefreshedEvent.class)
 	public void start() {
 		log.info("-- start() method called - container ready to go --");
@@ -50,27 +72,30 @@ public class StartGameConsole {
 			System.out.println("Which game do you want play?\n" +
 					"1 Tic-Tac-Toe\n" +
 					"2 Guess Number Game\n" +
-					"3 not implemented yet\n" +
+					"3 Random Joke :-)\n" +
 					"q Quit");
 			String choice = scanner.nextLine().trim();
 //			scanner.nextLine();
 
 			switch (choice) {
 				case "1":
-					System.out.println("Tic Tac Toe was chosen");
+					log.info("Tic Tac Toe was chosen");
 					ticTacToeGame.startTtt();
 					break;
 				case "2":
-					System.out.println("Guess Numbers was chosen");
+					log.info("Guess Numbers was chosen");
 					guessNumberConsoleStart.startGame();
 					break;
 				case "3":
-					System.out.println("3 was chosen");
+					log.info("Random Joke was chosen");
+					randomJokeController.startRandomJokeCrawler();
 					break;
 				case "q":
+					log.info("Quit was chosen");
 					System.out.println("Quit...");
 					break;
 				default:
+					log.info("Invalid user input. Default case gets executed.");
 					System.out.println("Wrong input, try again...");
 			}
 

@@ -26,13 +26,6 @@
         <!-- Transitive Dependency -->
         <dependency>
             <groupId>ch.zhaw</groupId>
-            <artifactId>start-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <!-- Transitive Dependency -->
-        <dependency>
-            <groupId>ch.zhaw</groupId>
             <artifactId>gameoflife-console</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -41,6 +34,20 @@
         <dependency>
             <groupId>ch.zhaw</groupId>
             <artifactId>guessnumber-console</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Transitive Dependency -->
+        <dependency>
+            <groupId>ch.zhaw</groupId>
+            <artifactId>randomejokecrawler-console</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Transitive Dependency -->
+        <dependency>
+            <groupId>ch.zhaw</groupId>
+            <artifactId>start-core</artifactId>
             <version>${project.version}</version>
         </dependency>
 
