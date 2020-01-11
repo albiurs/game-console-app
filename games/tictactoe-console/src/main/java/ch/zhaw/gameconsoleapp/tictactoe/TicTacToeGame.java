@@ -8,14 +8,15 @@ import java.util.*;
 
 /**
  * TicTacToeGame
- *
+ *a simple game of tic tac toe given out in the console
  * @author created by Danian Kiarostami, on 2020-01-09
- * @version
+ * @version 1.0
  */
 @Component
 public class TicTacToeGame {
 
     // == constants ==
+    // Initialization of Slf4j logger.
     private static final Logger log = LoggerFactory.getLogger(TicTacToeGame.class);	// Initialization of Slf4j logger
 
     // == fields ==
@@ -25,15 +26,18 @@ public class TicTacToeGame {
 
     // == public methods ==
 
-
+    /**
+     *startTtt()
+     * Starts the Tic Tac Toe Console Game and finishes after the user or computer has won
+     */
     public static void startTtt() {
 
         log.info("-- startTtt() called, game starts up --");
+
         /**
-        * the gameboard is initialized with char and filled with the following symboles,
+        * the table is initialized with char and filled with the following symboles,
         * so it looks like a board in the output
         */
-
         char[][] table ={{'1', '|','2','|','3'},
                 {'-', '+','-','+','-'},
                 {'4', '|','5','|','6'},
@@ -43,13 +47,15 @@ public class TicTacToeGame {
         createGameBoard(table);
 
         while(true){
-            Scanner scan = new Scanner(System.in);
-            System.out.println("Choose from 1-9 where you want to put your X");
-            int playerPos = scan.nextInt();
-            /**
-             * the while loop checks if the position is already taken by either the player or the computer
-             * so you cannot override the symbole of your counterpart will be repeated for the computer at line 62
-             */
+
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Choose from 1-9 where you want to put your X");
+                int playerPos = scan.nextInt();
+
+
+              //the while loop checks if the position is already taken by either the player or the computer
+              //so you cannot override the symbole of your counterpart will be repeated for the computer at line 62
+
             while  (playerPosition.contains(playerPos) || computerPosition.contains(playerPosition)){
                 System.out.println("Position taken, take another");
                 playerPos = scan.nextInt();
@@ -82,7 +88,7 @@ public class TicTacToeGame {
 
     /**
      * Method is used for console output of array table
-     * @param table
+     * @param table gives an output of the array table
      */
     public static void createGameBoard(char[][] table){
         for(char[] row : table){
@@ -97,9 +103,9 @@ public class TicTacToeGame {
 
     /**
      * The method changes between players for the input into the ttt array
-     * @param table
-     * @param pos
-     * @param User
+     * @param table the array of the gameboard
+     * @param pos  is where in the array the symbole of the player or computer should be stored
+     * @param User used for figuring out if it's the computer or the player
      */
     public static void placePiece(char[][] table, int pos, String User) {
 
@@ -113,10 +119,10 @@ public class TicTacToeGame {
             computerPosition.add(pos);
         }
 
-        /**
-         * the switch case is for determing  where
-         * in the array the symbole of the player or cpu should be stored
-         */
+
+         // the switch case is for determing  where
+         //in the array the symbole of the player or computer should be stored
+
         switch(pos){
             case 1:
                 table[0][0] = symbol;
@@ -155,7 +161,7 @@ public class TicTacToeGame {
     /**
      * The method checks for the winning conditions, this means the positions which are defined,
      * are all occupied by either player or computer generates the winning message
-     * @return
+     * @return returns the winning message
      */
     public static String checkWinner(){
 
