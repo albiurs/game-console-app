@@ -34,10 +34,10 @@ public class TicTacToeGame {
 
         log.info("-- startTtt() called, game starts up --");
 
-        /**
-        * the table is initialized with char and filled with the following symboles,
-        * so it looks like a board in the output
-        */
+
+         //the table is initialized with char and filled with the following symboles,
+         //so it looks like a board in the output
+
         char[][] table ={{'1', '|','2','|','3'},
                 {'-', '+','-','+','-'},
                 {'4', '|','5','|','6'},
@@ -48,10 +48,9 @@ public class TicTacToeGame {
 
         while(true){
 
-                Scanner scan = new Scanner(System.in);
-                System.out.println("Choose from 1-9 where you want to put your X");
-                int playerPos = scan.nextInt();
-
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Choose from 1-9 where you want to put your X");
+            int playerPos = scan.nextInt();
 
               //the while loop checks if the position is already taken by either the player or the computer
               //so you cannot override the symbole of your counterpart will be repeated for the computer at line 62
