@@ -58,6 +58,17 @@ public class TicTacToeGame {
             while  (playerPosition.contains(playerPos) || computerPosition.contains(playerPosition)){
                 System.out.println("Position taken, take another");
                 playerPos = scan.nextInt();
+                try{
+                    if(playerPos>= 1 || playerPos<=9){
+                        scan.nextInt();
+                    }else{
+                        System.out.println("Not in range. Choose a number between 1 and 9");
+                        scan.nextInt();
+                    }
+                }catch(Exception e){
+                    System.out.println("Not a number. Please choose a number between 1 and 9");
+                    scan.nextInt();
+                }
             }
             placePiece(table,playerPos,"Player");
             String result = checkWinner();
