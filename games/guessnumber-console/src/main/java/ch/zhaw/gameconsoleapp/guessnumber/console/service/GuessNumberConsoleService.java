@@ -1,7 +1,7 @@
 package ch.zhaw.gameconsoleapp.guessnumber.console.service;
 
-import ch.zhaw.gameconsoleapp.guessnumber.service.CoreGameLogic;
-import ch.zhaw.gameconsoleapp.guessnumber.service.MessageProvider;
+import ch.zhaw.gameconsoleapp.guessnumber.core.components.CoreGameLogic;
+import ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

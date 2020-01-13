@@ -1,4 +1,4 @@
-package ch.zhaw.gameconsoleapp.guessnumber.service;
+package ch.zhaw.gameconsoleapp.guessnumber.core.components;
 
 /**
  * CoreGameLogic

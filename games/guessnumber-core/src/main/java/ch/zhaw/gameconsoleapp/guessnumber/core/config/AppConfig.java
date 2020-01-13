@@ -1,4 +1,4 @@
-package ch.zhaw.gameconsoleapp.guessnumber.config;
+package ch.zhaw.gameconsoleapp.guessnumber.core.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

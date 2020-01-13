@@ -1,11 +1,11 @@
-package ch.zhaw.gameconsoleapp.guessnumber.service;
+package ch.zhaw.gameconsoleapp.guessnumber.core.components;
 
-import ch.zhaw.gameconsoleapp.guessnumber.annotationinterface.MaxNumber;
-import ch.zhaw.gameconsoleapp.guessnumber.annotationinterface.MinNumber;
+import ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface.MaxNumber;
+import ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface.MinNumber;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
@@ -16,7 +16,7 @@ import java.util.Random;
  * @author created by Urs Albisser, on 2020-01-04
  * @version 1.0
  */
-@Service
+@Component
 public class NumberCalculatorImpl implements NumberCalculator {
 
 

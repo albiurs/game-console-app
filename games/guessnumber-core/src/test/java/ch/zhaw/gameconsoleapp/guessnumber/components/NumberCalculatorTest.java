@@ -1,5 +1,6 @@
-package ch.zhaw.gameconsoleapp.guessnumber.service;
+package ch.zhaw.gameconsoleapp.guessnumber.components;
 
+import ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculatorImpl;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

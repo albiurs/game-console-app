@@ -1,4 +1,4 @@
-package ch.zhaw.gameconsoleapp.guessnumber.annotationinterface;
+package ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 

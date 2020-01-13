@@ -1,9 +1,9 @@
-package ch.zhaw.gameconsoleapp.guessnumber.service;
+package ch.zhaw.gameconsoleapp.guessnumber.core.components;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -15,7 +15,7 @@ import javax.annotation.PreDestroy;
  * @author created by Urs Albisser, on 2020-01-07
  * @version 1.0
  */
-@Service
+@Component
 public class MessageProviderImpl implements MessageProvider {
 	
 

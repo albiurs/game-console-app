@@ -1,4 +1,4 @@
-package ch.zhaw.gameconsoleapp.guessnumber.annotationinterface;
+package ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 
@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * MaxNumber
+ * DefaultGuessCount
  *
  * atInterface
  * Defines this class to be an annotation interface.
@@ -31,5 +31,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Qualifier
-public @interface MaxNumber {
+public @interface DefaultGuessCount {
 }

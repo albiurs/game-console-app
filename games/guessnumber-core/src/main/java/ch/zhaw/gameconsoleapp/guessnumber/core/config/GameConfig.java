@@ -1,8 +1,8 @@
-package ch.zhaw.gameconsoleapp.guessnumber.config;
+package ch.zhaw.gameconsoleapp.guessnumber.core.config;
 
-import ch.zhaw.gameconsoleapp.guessnumber.annotationinterface.DefaultGuessCount;
-import ch.zhaw.gameconsoleapp.guessnumber.annotationinterface.MaxNumber;
-import ch.zhaw.gameconsoleapp.guessnumber.annotationinterface.MinNumber;
+import ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface.DefaultGuessCount;
+import ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface.MaxNumber;
+import ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface.MinNumber;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
