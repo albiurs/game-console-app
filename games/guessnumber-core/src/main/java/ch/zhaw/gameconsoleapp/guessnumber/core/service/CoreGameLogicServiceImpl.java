@@ -170,7 +170,7 @@ public class CoreGameLogicServiceImpl implements CoreGameLogicService {
 	/**
 	 * isGameOver()
 	 * Is the game over?
-	 * @return The game is over true/fale.
+	 * @return The game is over true/false.
 	 */
 	public boolean isGameOver() {
 		return isGameWon() || isGameLost();

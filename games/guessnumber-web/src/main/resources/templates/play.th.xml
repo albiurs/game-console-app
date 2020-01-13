@@ -1,0 +1,41 @@
+<!-- <thlogic>-block -->
+<thlogic>
+
+    <!-- decoupled replace attribute -->
+    <!-- replace whole html tag with Thymeleaf fragment -->
+    <!-- <htmlTag th:replace="~{folder/fileName :: fragmentName}"> -->
+    <attr sel="#headId"
+          th:replace="~{fragments/head :: headFragment}"/>
+
+    <!-- decoupled th:text attribute -->
+    <!-- replaces inner text -->
+    <!-- Pre-processing: th:text="${__${processed-first}__}" > outer processed after -->
+    <!-- th:text="${__${T(package.subpackage.Class).ConstantOrStaticMethod}__}" -->
+    <!-- T() = T-operator = specify a Java Type (T) = an instance of a Java class. (Tag form the Spring expression language).
+        It can be used to invoke static methods and to get the value of static variables -->
+    <attr sel="#main-message"
+          th:text="${__${T(ch.zhaw.gameconsoleapp.guessnumber.web.util.AttributeNames).MAIN_MESSAGE}__}"/>
+
+    <!-- decoupled th:text attribute -->
+    <!-- replaces inner text -->
+    <!-- Pre-processing: th:text="${__${processed-first}__}" > outer processed after -->
+    <!-- th:text="${__${T(package.subpackage.Class).ConstantOrStaticMethod}__}" -->
+    <!-- T() = T-operator = specify a Java Type (T) = an instance of a Java class. (Tag form the Spring expression language).
+        It can be used to invoke static methods and to get the value of static variables -->
+    <attr sel="#result-message"
+          th:text="${__${T(ch.zhaw.gameconsoleapp.guessnumber.web.util.AttributeNames).RESULT_MESSAGE}__}"/>
+
+    <!-- decoupled th:action attribute -->
+    <!-- call action for html element -->
+    <!-- th:action="action-url-mapping-to-be-called" > replaces action="play" -->
+    <!-- @{} = Thymeleaf URL syntax -->
+    <attr sel="#game-form"
+          th:action="@{__${T(ch.zhaw.gameconsoleapp.guessnumber.web.util.ViewNameUrlMappings).PLAY}__}"/>
+
+    <!-- decoupled replace attribute -->
+    <!-- replace whole html tag with Thymeleaf fragment -->
+    <!-- <htmlTag th:replace="~{folder/fileName :: fragmentName}"> -->
+    <attr sel="#footerId"
+          th:replace="fragments/footer :: footer"/>
+
+</thlogic>
