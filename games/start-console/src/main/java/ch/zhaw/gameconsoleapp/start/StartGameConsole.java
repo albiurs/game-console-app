@@ -1,6 +1,6 @@
 package ch.zhaw.gameconsoleapp.start;
 
-import ch.zhaw.gameconsoleapp.guessnumber.console.service.GuessNumberConsoleService;
+import ch.zhaw.gameconsoleapp.guessnumber.console.controller.GuessNumberConsoleController;
 import ch.zhaw.gameconsoleapp.randomjokecrawler.console.controller.RandomJokeController;
 import ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGame;
 import org.slf4j.Logger;
@@ -27,7 +27,7 @@ public class StartGameConsole {
 
 	// == fields ==
 	private final TicTacToeGame ticTacToeGame;
-	private final GuessNumberConsoleService guessNumberConsoleService;
+	private final GuessNumberConsoleController guessNumberConsoleController;
 	private final RandomJokeController randomJokeController;
 
 
@@ -36,17 +36,17 @@ public class StartGameConsole {
 	 * StartGameConsole()
 	 * Constructor, initializing the fields
 	 *
-	 * @param guessNumberConsoleService GuessNumberConsoleService instance
+	 * @param guessNumberConsoleController GuessNumberConsoleController instance
 	 * @param ticTacToeGame TicTacToeGame instance
 	 * @param randomJokeController RandomJokeController instance
 	 */
 	@Autowired
-	public StartGameConsole(GuessNumberConsoleService guessNumberConsoleService,
+	public StartGameConsole(GuessNumberConsoleController guessNumberConsoleController,
 							TicTacToeGame ticTacToeGame,
 							RandomJokeController randomJokeController) {
 		log.info("-- Constructor StartGameConsole() called --");
 		this.ticTacToeGame = ticTacToeGame;
-		this.guessNumberConsoleService = guessNumberConsoleService;
+		this.guessNumberConsoleController = guessNumberConsoleController;
 		this.randomJokeController = randomJokeController;
 	}
 
@@ -84,7 +84,7 @@ public class StartGameConsole {
 					break;
 				case "2":
 					log.info("Guess Numbers was chosen");
-					guessNumberConsoleService.startGame();
+					guessNumberConsoleController.startGame();
 					break;
 				case "3":
 					log.info("Random Joke was chosen");
