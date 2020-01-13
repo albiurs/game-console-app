@@ -15,7 +15,7 @@ import java.util.Scanner;
  * Start class for the Guess Number Game.
  *
  * @author created by Urs Albisser, on 2019-12-30
- * @version 1.0
+ * @version 1.0.1
  */
 @Component
 public class GuessNumberConsoleStart {
