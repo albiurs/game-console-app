@@ -1,28 +1,28 @@
-package ch.zhaw.gameconsoleapp.guessnumber.console;
+package ch.zhaw.gameconsoleapp.guessnumber.console.service;
 
 import ch.zhaw.gameconsoleapp.guessnumber.service.CoreGameLogic;
 import ch.zhaw.gameconsoleapp.guessnumber.service.MessageProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * GuessNumberConsoleStart
+ * GuessNumberConsoleService
  * Start class for the Guess Number Game.
  *
  * @author created by Urs Albisser, on 2019-12-30
  * @version 1.0.1
  */
-@Component
-public class GuessNumberConsoleStart {
+@Service
+public class GuessNumberConsoleService {
 
 
 	// == constants ==
-	private static final Logger log = LoggerFactory.getLogger(GuessNumberConsoleStart.class);
+	private static final Logger log = LoggerFactory.getLogger(GuessNumberConsoleService.class);
 
 
 	// == fields ==
@@ -32,13 +32,13 @@ public class GuessNumberConsoleStart {
 
 	// == constructors ==
 	/**
-	 * GuessNumberConsoleStart()
+	 * GuessNumberConsoleService()
 	 * Autowired Constructor
 	 * @param coreGameLogic CoreGameLogic instance to be initialized
 	 * @param messageProvider MessageProvider instance to be initialized
 	 */
 	@Autowired
-	public GuessNumberConsoleStart(CoreGameLogic coreGameLogic, MessageProvider messageProvider) {
+	public GuessNumberConsoleService(CoreGameLogic coreGameLogic, MessageProvider messageProvider) {
 		this.coreGameLogic = coreGameLogic;
 		this.messageProvider = messageProvider;
 	}
@@ -51,7 +51,7 @@ public class GuessNumberConsoleStart {
 	 */
 	public void startGame() {
 
-		log.info("GuessNumberConsoleStart.startGame() called. Game starts up...");
+		log.info("GuessNumberConsoleService.startGame() called. Game starts up...");
 
 		Scanner scanner = new Scanner(System.in);
 
