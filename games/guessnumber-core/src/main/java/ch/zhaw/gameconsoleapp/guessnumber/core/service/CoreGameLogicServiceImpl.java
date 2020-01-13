@@ -1,27 +1,28 @@
-package ch.zhaw.gameconsoleapp.guessnumber.core.components;
+package ch.zhaw.gameconsoleapp.guessnumber.core.service;
 
 import ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface.DefaultGuessCount;
+import ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
- * CoreGameLogicImpl
+ * CoreGameLogicServiceImpl
  * Implementation of the Core Game Logic interface. Implements the core game logic.
  *
  * @author created by Urs Albisser, on 2020-01-07
  * @version 1.0
  */
-@Component
-public class CoreGameLogicImpl implements CoreGameLogic {
+@Service
+public class CoreGameLogicServiceImpl implements CoreGameLogicService {
 
 
 	// == constants ==
-	private static final Logger log = LoggerFactory.getLogger(CoreGameLogicImpl.class); 	// Initialization of Slf4j logger
+	private static final Logger log = LoggerFactory.getLogger(CoreGameLogicServiceImpl.class); 	// Initialization of Slf4j logger
 
 
 	// == fields ==
@@ -47,7 +48,7 @@ public class CoreGameLogicImpl implements CoreGameLogic {
 	 *                             game.properties
 	 */
 	@Autowired
-	public CoreGameLogicImpl(NumberCalculator numberCalculator, @DefaultGuessCount int defaultGuessCount) {
+	public CoreGameLogicServiceImpl(NumberCalculator numberCalculator, @DefaultGuessCount int defaultGuessCount) {
 		this.numberCalculator = numberCalculator;
 		log.info("Constructor GameImpl() called. Initialized numberCalculator = {}", numberCalculator);
 		this.defaultGuessCount = defaultGuessCount;

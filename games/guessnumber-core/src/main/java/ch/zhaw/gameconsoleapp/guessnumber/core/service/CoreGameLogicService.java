@@ -1,13 +1,13 @@
-package ch.zhaw.gameconsoleapp.guessnumber.core.components;
+package ch.zhaw.gameconsoleapp.guessnumber.core.service;
 
 /**
- * CoreGameLogic
+ * CoreGameLogicService
  * Core Game Lgic interface
  *
  * @author created by Urs Albisser, on 2020-01-07
  * @version 1.0
  */
-public interface CoreGameLogic {
+public interface CoreGameLogicService {
 
 	int getRandomNumberToGuess();
 

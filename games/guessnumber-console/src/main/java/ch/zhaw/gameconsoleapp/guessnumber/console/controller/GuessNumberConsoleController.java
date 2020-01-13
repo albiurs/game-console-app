@@ -1,6 +1,6 @@
 package ch.zhaw.gameconsoleapp.guessnumber.console.controller;
 
-import ch.zhaw.gameconsoleapp.guessnumber.core.components.CoreGameLogic;
+import ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicService;
 import ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +26,7 @@ public class GuessNumberConsoleController {
 
 
 	// == fields ==
-	private final CoreGameLogic coreGameLogic;
+	private final CoreGameLogicService coreGameLogicService;
 	private final MessageProvider messageProvider;
 
 
@@ -34,12 +34,12 @@ public class GuessNumberConsoleController {
 	/**
 	 * GuessNumberConsoleController()
 	 * Autowired Constructor
-	 * @param coreGameLogic CoreGameLogic instance to be initialized
+	 * @param coreGameLogicService CoreGameLogicService instance to be initialized
 	 * @param messageProvider MessageProvider instance to be initialized
 	 */
 	@Autowired
-	public GuessNumberConsoleController(CoreGameLogic coreGameLogic, MessageProvider messageProvider) {
-		this.coreGameLogic = coreGameLogic;
+	public GuessNumberConsoleController(CoreGameLogicService coreGameLogicService, MessageProvider messageProvider) {
+		this.coreGameLogicService = coreGameLogicService;
 		this.messageProvider = messageProvider;
 	}
 
@@ -63,15 +63,15 @@ public class GuessNumberConsoleController {
 			try {
 				int guess = scanner.nextInt();
 				scanner.nextLine();
-				coreGameLogic.setGuessedNumber(guess);
-				coreGameLogic.checkGuess();
+				coreGameLogicService.setGuessedNumber(guess);
+				coreGameLogicService.checkGuess();
 			} catch (InputMismatchException e) {
 				System.out.println("Wrong input, only numbers allowed!");
 				scanner.next();
 			}
 
 
-			if (coreGameLogic.isGameWon() || coreGameLogic.isGameLost()) {
+			if (coreGameLogicService.isGameWon() || coreGameLogicService.isGameLost()) {
 				System.out.println(messageProvider.getPostGuessMessage());
 				System.out.println("Play again (y/n)?");
 
@@ -80,7 +80,7 @@ public class GuessNumberConsoleController {
 					break; // break out of while loop, if choice is anything but "y"
 				}
 
-				coreGameLogic.resetGame();
+				coreGameLogicService.resetGame();
 			}
 		}
 	}

@@ -1,5 +1,6 @@
 package ch.zhaw.gameconsoleapp.guessnumber.core.components;
 
+import ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,18 +25,18 @@ public class MessageProviderImpl implements MessageProvider {
 
 
 	// == fields ==
-	private final CoreGameLogic coreGameLogic;
+	private final CoreGameLogicService coreGameLogicService;
 
 
 	// == constructors ==
 	/**
 	 * MessageProviderImpl() constructor
-	 * Init of the CoreGameLogic instance.
-	 * @param coreGameLogic CoreGameLogic instance.
+	 * Init of the CoreGameLogicService instance.
+	 * @param coreGameLogicService CoreGameLogicService instance.
 	 */
 	@Autowired
-	public MessageProviderImpl(CoreGameLogic coreGameLogic) {
-		this.coreGameLogic = coreGameLogic;
+	public MessageProviderImpl(CoreGameLogicService coreGameLogicService) {
+		this.coreGameLogicService = coreGameLogicService;
 	}
 
 
@@ -46,7 +47,7 @@ public class MessageProviderImpl implements MessageProvider {
 	 */
 	@PostConstruct
 	public void init() {
-		log.info("coreGameLogic = {}", coreGameLogic);
+		log.info("coreGameLogicService = {}", coreGameLogicService);
 	}
 
 
@@ -71,9 +72,9 @@ public class MessageProviderImpl implements MessageProvider {
 	@Override
 	public String getPreGuessMessage() {
 		return "Number is between " +
-				coreGameLogic.getSmallestNumber() +
+				coreGameLogicService.getSmallestNumber() +
 				" and " +
-				coreGameLogic.getBiggestNumber() +
+				coreGameLogicService.getBiggestNumber() +
 				". Can you guess it?";
 	}
 
@@ -85,21 +86,21 @@ public class MessageProviderImpl implements MessageProvider {
 	@Override
 	public String getPostGuessMessage() {
 
-		if (coreGameLogic.isGameWon()) {
-			return "You guessed it! The number was: " + coreGameLogic.getRandomNumberToGuess();
-		} else if (coreGameLogic.isGameLost()) {
-			return "You lost! The number was: " + coreGameLogic.getRandomNumberToGuess();
-		} else if (!coreGameLogic.isGuessInValidNumberRange()) {
+		if (coreGameLogicService.isGameWon()) {
+			return "You guessed it! The number was: " + coreGameLogicService.getRandomNumberToGuess();
+		} else if (coreGameLogicService.isGameLost()) {
+			return "You lost! The number was: " + coreGameLogicService.getRandomNumberToGuess();
+		} else if (!coreGameLogicService.isGuessInValidNumberRange()) {
 			return "Invalid number range!";
-		} else if (coreGameLogic.getRemainingGuesses() == coreGameLogic.getDefaultGuessCount()) {
+		} else if (coreGameLogicService.getRemainingGuesses() == coreGameLogicService.getDefaultGuessCount()) {
 			return "What is your first guess?";
 		} else {
 			String direction = "Lower! ";
 
-			if (coreGameLogic.getGuessedNumber() < coreGameLogic.getRandomNumberToGuess()) {
+			if (coreGameLogicService.getGuessedNumber() < coreGameLogicService.getRandomNumberToGuess()) {
 				direction = "Higher! ";
 			}
-			return direction + "You have " + coreGameLogic.getRemainingGuesses() + " guesses left.";
+			return direction + "You have " + coreGameLogicService.getRemainingGuesses() + " guesses left.";
 		}
 	}
 }
