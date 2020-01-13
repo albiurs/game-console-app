@@ -27,9 +27,13 @@ public interface CoreGameLogicService {
 
 	void checkGuess();
 
+	void guessTheNumber(int setGuessedNumber);
+
 	boolean isGuessInValidNumberRange();
 
 	boolean isGameWon();
 
 	boolean isGameLost();
+
+	boolean isGameOver();
 }

@@ -63,15 +63,14 @@ public class GuessNumberConsoleController {
 			try {
 				int guess = scanner.nextInt();
 				scanner.nextLine();
-				coreGameLogicService.setGuessedNumber(guess);
-				coreGameLogicService.checkGuess();
+				coreGameLogicService.guessTheNumber(guess);
 			} catch (InputMismatchException e) {
 				System.out.println("Wrong input, only numbers allowed!");
 				scanner.next();
 			}
 
 
-			if (coreGameLogicService.isGameWon() || coreGameLogicService.isGameLost()) {
+			if (coreGameLogicService.isGameOver()) {
 				System.out.println(messageProvider.getPostGuessMessage());
 				System.out.println("Play again (y/n)?");
 

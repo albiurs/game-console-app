@@ -44,9 +44,9 @@ public class DecoupledLogicSetup {
 	/**
 	 * init()
 	 * Spring Boot init() method.
-	 * atPostConstruct: called right after running the constructor.
-	 *
 	 * Enable the use of the template resolver's decoupled template logic to be used in the program.
+	 *
+	 * atPostConstruct: called right after running the constructor.
 	 */
 	@PostConstruct
 	public void	 init() {

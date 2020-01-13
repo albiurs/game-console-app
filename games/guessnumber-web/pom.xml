@@ -23,6 +23,13 @@
     <!-- Dependencies -->
     <dependencies>
 
+        <!-- Transitive Dependency -->
+        <dependency>
+            <groupId>ch.zhaw</groupId>
+            <artifactId>guessnumber-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!-- Spring Boot Web Starter -->
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
@@ -35,15 +42,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-
-        <!-- Spring Boot Developer Tools -->
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
         </dependency>
 
     </dependencies>

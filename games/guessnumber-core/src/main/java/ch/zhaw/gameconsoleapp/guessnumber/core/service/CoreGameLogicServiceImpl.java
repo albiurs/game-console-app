@@ -59,7 +59,7 @@ public class CoreGameLogicServiceImpl implements CoreGameLogicService {
 	// == init ==
 	/**
 	 * reset()
-	 * Reset fields to init values.
+	 * Reset fields back to init values.
 	 *
 	 * atPostConstruct Spring Lifecycle callback method for initiation
 	 */
@@ -126,6 +126,18 @@ public class CoreGameLogicServiceImpl implements CoreGameLogicService {
 	}
 
 	/**
+	 * guessTheNumber()
+	 * Let's the player guess a new number by setting a guess, followed by automatically check the guess
+	 * against the randomNumberToGuess.
+	 * @param guess The number guessed by the player
+	 */
+	@Override
+	public void guessTheNumber(int guess) {
+		setGuessedNumber(guess);
+		checkGuess();
+	}
+
+	/**
 	 * isGuessInValidNumberRange()
 	 * Guess is within the valid number range.
 	 * @return Guess is in valid number range true/false.
@@ -137,7 +149,7 @@ public class CoreGameLogicServiceImpl implements CoreGameLogicService {
 
 	/**
 	 * isGameWon()
-	 * Game is won.
+	 * Is the game won?
 	 * @return The game is won true/false.
 	 */
 	@Override
@@ -147,7 +159,7 @@ public class CoreGameLogicServiceImpl implements CoreGameLogicService {
 
 	/**
 	 * isGameLost()
-	 * The game is lost.
+	 * Is the game lost?
 	 * @return The game is lost true/false.
 	 */
 	@Override
@@ -155,8 +167,17 @@ public class CoreGameLogicServiceImpl implements CoreGameLogicService {
 		return !isGameWon() && remainingGuesses <= 0;
 	}
 
-	// setter & getter
+	/**
+	 * isGameOver()
+	 * Is the game over?
+	 * @return The game is over true/fale.
+	 */
+	public boolean isGameOver() {
+		return isGameWon() || isGameLost();
+	}
 
+
+	// setter & getter
 	/**
 	 * getRandomNumberToGuess()
 	 * Get the randomly generated number to be guessed.

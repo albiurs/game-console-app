@@ -27,5 +27,8 @@ public class WebConfig implements WebMvcConfigurer {
 
 		// register view controller --> HOME view controller
 		registry.addViewController("/").setViewName(ViewNameDefinitions.HOME);
+
+		// second registered view controller to show the homepage on /home instead of /
+//		registry.addViewController("home").setViewName(ViewNameDefinitions.HOME);
 	}
 }
