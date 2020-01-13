@@ -10,5 +10,7 @@
     <!-- define logging levels -->
     <logger name="ch.zhaw" level="TRACEq"/>
     <logger name="org.springframework" level="INFO"/>
+<!--    <logger name="org.springframework.boot" level="INFO"/>-->
+    <logger name="org.thymeleaf" level="INFO"/>
 
 </configuration>
