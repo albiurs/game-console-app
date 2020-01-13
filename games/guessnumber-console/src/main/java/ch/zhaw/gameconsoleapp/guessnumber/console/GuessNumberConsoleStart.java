@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -59,10 +60,16 @@ public class GuessNumberConsoleStart {
 			System.out.println(messageProvider.getPreGuessMessage());
 			System.out.println(messageProvider.getPostGuessMessage());
 
-			int guess = scanner.nextInt();
-			scanner.nextLine();
-			coreGameLogic.setGuessedNumber(guess);
-			coreGameLogic.checkGuess();
+			try {
+				int guess = scanner.nextInt();
+				scanner.nextLine();
+				coreGameLogic.setGuessedNumber(guess);
+				coreGameLogic.checkGuess();
+			} catch (InputMismatchException e) {
+				System.out.println("Wrong input, only numbers allowed!");
+				scanner.next();
+			}
+
 
 			if (coreGameLogic.isGameWon() || coreGameLogic.isGameLost()) {
 				System.out.println(messageProvider.getPostGuessMessage());
