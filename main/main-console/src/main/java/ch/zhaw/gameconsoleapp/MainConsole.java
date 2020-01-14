@@ -6,10 +6,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Main
+ * MainConsole
  * Main Class, starting the Spring Boot Application.
  *
- * atSpringBootApplication: Enables automatic bean-scanning of it's current package and all sub-packages (ch.zhaw/** (in all Modules)).
+ * atSpringBootApplication: Enables automatic bean-scanning of it's current package
+ * and all sub-packages (ch.zhaw.gameconsoleapp/** (in all Modules)).
  *
  * @author created by Urs Albisser, on 2019-12-04
  * @version 1.0
@@ -23,7 +24,7 @@ public class MainConsole {
 
 	/**
 	 * main()
-	 * Initiation of console application
+	 * Initiation of Spring Boot console application
 	 *
 	 * @param args Arguments to be passed for application start.
 	 */
