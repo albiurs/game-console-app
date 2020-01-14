@@ -20,10 +20,11 @@
 		</h3>
 
 		<!-- replace element ID with Thymeleaf attribute in file.th.xml > <thlogic> > <attr sel="#elementId" th:xxxx="yyyy"/> -->
-		<form id="game-form" action="play" method="post">
+		<form id="game-form" action="play_replace_link" method="post">
 			<!-- for="id-of-associated-input-element" -->
 			<label for="guess_id">Enter your guess</label>
-			<input id="guess_id" type="number" name="guessValue"/>
+			<!-- <input name="xxx"/> must match the @RequestParam parameter name in the WebController.java -->
+			<input id="guess_id" type="number" name="submittedGuess"/>
 			<input type="submit" value="Submit"/>
 		</form>
 

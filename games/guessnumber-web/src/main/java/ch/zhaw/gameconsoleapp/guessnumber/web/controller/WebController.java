@@ -44,8 +44,8 @@ public class WebController {
 	 * Request method for displaying the play page and then for displaying the form after the user has typed in
 	 * the guess.
 	 *
-	 * atGetMapping(): Gets the mapping of ViewNameUrlMappings.PLAY.
-	 * Therefore, this method will be called for the /play mapping.
+	 * atGetMapping(): The url mapping of ViewNameUrlMappings.PLAY to be used for the according Get request.
+	 * Therefore, this method will be executed, if the /play mapping is called.
 	 *
 	 * @param model Spring UI Model instance
 	 * @return ViewNameDefinitions.GAME_OVER or ViewNameDefinitions.PLAY, depending on webGameLogicService.isGameOver()
@@ -69,13 +69,34 @@ public class WebController {
 		return ViewNameDefinitions.PLAY;
 	}
 
+	/**
+	 * processMessage()
+	 *
+	 * atPostMapping(): The url mapping of ViewNameUrlMappings.PLAY to be used for the according Post request.
+	 * Therefore, this method will be executed,
+	 * if the /play mapping is called in a post request (e.g. if the form is submitted).
+	 * atRequestParam: Spring web bind annotation to extract query parameters from the request,
+	 * where the parameter must match the name attribute of the input tag inside the submitted form.
+	 *
+	 * @param submittedGuess the player's guessed number, extracted from the request
+	 * @return ViewNameUrlMappings.REDIRECT_PLAY (redirect back to play)
+	 */
 	@PostMapping(ViewNameUrlMappings.PLAY)
-	public String processMessage(@RequestParam int guessValue) {
-		log.info("guess = {}", guessValue);
-		webGameLogicService.guessTheNumber(guessValue);
+	public String processMessage(@RequestParam int submittedGuess) {
+		log.info("guessed number extract form request = {}", submittedGuess);
+		webGameLogicService.guessTheNumber(submittedGuess);
 		return ViewNameUrlMappings.REDIRECT_PLAY;
 	}
 
+	/**
+	 * restart()
+	 * Reset and restart the game.
+	 *
+	 * atGetMapping(): The url mapping of ViewNameUrlMappings.RESTART to be used for the according Get request.
+	 * Therefore, this method will be executed, if the /restart mapping is called.
+	 *
+	 * @return ViewNameUrlMappings.REDIRECT_PLAY (redirect back to play)
+	 */
 	@GetMapping(ViewNameUrlMappings.RESTART)
 	public String restart() {
 		webGameLogicService.resetGame();

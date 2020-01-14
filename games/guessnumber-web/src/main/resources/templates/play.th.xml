@@ -27,7 +27,7 @@
 
     <!-- decoupled th:action attribute -->
     <!-- call action for html element -->
-    <!-- th:action="action-url-mapping-to-be-called" > replaces action="play" -->
+    <!-- th:action="action-url-mapping-to-be-called" > replaces action="xxxx" -->
     <!-- @{} = Thymeleaf URL syntax -->
     <attr sel="#game-form"
           th:action="@{__${T(ch.zhaw.gameconsoleapp.guessnumber.web.util.ViewNameUrlMappings).PLAY}__}"/>
