@@ -39,6 +39,8 @@
         <module>tictactoe-core</module>
         <module>tictactoe-console</module>
         <module>tictactoe-gui</module>
+        <module>guessnumber-web</module>
+        <module>start-web</module>
     </modules>
 
 

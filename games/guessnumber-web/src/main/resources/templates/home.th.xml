@@ -1,0 +1,24 @@
+<!-- <thlogic>-block -->
+<thlogic>
+
+    <!-- decoupled replace attribute -->
+    <!-- replace whole html tag with Thymeleaf fragment -->
+    <!-- <htmlTag th:replace="~{folder/fileName :: fragmentName}"> -->
+    <attr sel="#headId"
+          th:replace="~{fragments/head :: headFragment}"/>
+
+    <!-- decoupled th:href attribute -->
+    <!-- replaces href link attribute -->
+    <!-- th:href="@{__${T(url-mapping-to-be-called}__}" -->
+    <!-- @{} = Thymeleaf URL syntax -->
+    <attr sel="#play-game"
+          th:href="@{__${T(ch.zhaw.gameconsoleapp.guessnumber.web.util.ViewNameUrlMappings).PLAY}__}"
+          th:text="Play"/>
+
+    <!-- decoupled replace attribute -->
+    <!-- replace whole html tag with Thymeleaf fragment -->
+    <!-- <htmlTag th:replace="~{folder/fileName :: fragmentName}"> -->
+    <attr sel="#footerId"
+          th:replace="fragments/footer :: footer"/>
+
+</thlogic>
