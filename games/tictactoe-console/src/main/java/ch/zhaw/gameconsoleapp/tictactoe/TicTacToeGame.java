@@ -60,6 +60,7 @@ public class TicTacToeGame {
                 playerPos = scan.nextInt();
             }
             placePiece(table,playerPos,"Player");
+
             String result = checkWinner();
             if(result.length() > 0){
                 System.out.println(result);
