@@ -50,6 +50,7 @@ public class TicTacToeGame {
 
             Scanner scan = new Scanner(System.in);
             System.out.println("Choose from 1-9 where you want to put your X");
+
             int playerPos = scan.nextInt();
 
               //the while loop checks if the position is already taken by either the player or the computer
