@@ -55,7 +55,7 @@ public class TicTacToeGame {
               //the while loop checks if the position is already taken by either the player or the computer
               //so you cannot override the symbole of your counterpart will be repeated for the computer at line 62
 
-            while  (playerPosition.contains(playerPos) || computerPosition.contains(playerPosition)){
+            while(playerPosition.contains(playerPos) || computerPosition.contains(playerPosition)){
                 System.out.println("Position taken, take another");
                 playerPos = scan.nextInt();
             }
@@ -70,7 +70,7 @@ public class TicTacToeGame {
             //randomizes where the computer will put a O on the board
             Random rand = new Random();
             int computerPos = rand.nextInt(9)+1;
-            while  (playerPosition.contains(computerPos) || computerPosition.contains(computerPos)) {
+            while(playerPosition.contains(computerPos) || computerPosition.contains(computerPos)) {
                 computerPos = rand.nextInt(9)+1;
             }
 
