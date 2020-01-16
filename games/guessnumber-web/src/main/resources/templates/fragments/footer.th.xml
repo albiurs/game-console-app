@@ -1,0 +1,10 @@
+<!-- <thlogic>-block -->
+<thlogic>
+
+    <!-- decoupled fragment attribute -->
+    <!-- Thymeleaf fragment definition to be called for replacement -->
+    <!-- th:fragment="fragmentName" -->
+    <attr sel="#footerId"
+          th:fragment="footer"/>
+
+</thlogic>

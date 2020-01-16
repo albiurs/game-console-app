@@ -48,27 +48,39 @@ public class TicTacToeGame {
 
         while(true){
 
+            int playerPos = 0;
             Scanner scan = new Scanner(System.in);
+
             System.out.println("Choose from 1-9 where you want to put your X");
-            int playerPos = scan.nextInt();
+
+            try {
+                playerPos = scan.nextInt();
+                scan.nextLine();
+            } catch (InputMismatchException e) {
+                System.out.println("Wrong input, only numbers allowed!");
+                scan.next();
+            }
 
               //the while loop checks if the position is already taken by either the player or the computer
               //so you cannot override the symbole of your counterpart will be repeated for the computer at line 62
 
             while  (playerPosition.contains(playerPos) || computerPosition.contains(playerPosition)){
+
                 System.out.println("Position taken, take another");
-                playerPos = scan.nextInt();
-                try{
-                    if(playerPos>= 1 || playerPos<=9){
-                        scan.nextInt();
-                    }else{
-                        System.out.println("Not in range. Choose a number between 1 and 9");
-                        scan.nextInt();
-                    }
-                }catch(Exception e){
-                    System.out.println("Not a number. Please choose a number between 1 and 9");
-                    scan.nextInt();
-                }
+                scan.nextInt();
+
+//                try{
+//                    playerPos = scan.nextInt();
+//                    if(playerPos>= 1 || playerPos<=9){
+//                        scan.nextInt();
+//                    }else{
+//                        System.out.println("Not in range. Choose a number between 1 and 9");
+//                        scan.nextInt();
+//                    }
+//                }catch(Exception e){
+//                    System.out.println("Not a number. Please choose a number between 1 and 9");
+//                    scan.next();
+//                }
             }
             placePiece(table,playerPos,"Player");
             String result = checkWinner();
