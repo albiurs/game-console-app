@@ -27,21 +27,7 @@
         <!-- Transitive Dependency -->
         <dependency>
             <groupId>ch.zhaw</groupId>
-            <artifactId>start-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <!-- Transitive Dependency -->
-        <dependency>
-            <groupId>ch.zhaw</groupId>
             <artifactId>gameoflife-gui</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <!-- Transitive Dependency -->
-        <dependency>
-            <groupId>ch.zhaw</groupId>
-            <artifactId>tictactoe-gui</artifactId>
             <version>${project.version}</version>
         </dependency>
 
