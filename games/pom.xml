@@ -34,11 +34,9 @@
         <module>randomjokecrawler-console</module>
         <module>randomjokecrawler-core</module>
         <module>start-console</module>
-        <module>start-core</module>
         <module>start-gui</module>
         <module>tictactoe-core</module>
         <module>tictactoe-console</module>
-        <module>tictactoe-gui</module>
         <module>guessnumber-web</module>
         <module>start-web</module>
     </modules>
