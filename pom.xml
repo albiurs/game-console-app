@@ -30,7 +30,7 @@
 	<properties>
 
 		<!-- Project Version/Revision -->
-		<revision>0.1.0-SNAPSHOT</revision>
+		<revision>1.0.0.RELEASE</revision>
 
 		<!-- Java Version -->
 		<java.version>11</java.version>
