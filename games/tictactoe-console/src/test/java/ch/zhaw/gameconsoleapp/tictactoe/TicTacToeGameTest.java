@@ -37,13 +37,20 @@ class TicTacToeGameTest {
 
 
 	// == JUnit tests ==
-	@Test
-	void startTtt() {
-	}
+
 
 
 	@Test
 	void placePiece() {
+
+		char[][] table = new char[5][5];
+		TicTacToeGame.placePiece(table,  9, "Player");
+		assertEquals(table[4][4], 'X');
+
+		table = new char[5][5];
+		TicTacToeGame.placePiece(table,  6, "Computer");
+		assertEquals(table[2][4], 'O');
+
 	}
 
 	@Test
@@ -67,11 +74,11 @@ class TicTacToeGameTest {
 		message = TicTacToeGame.checkWinner(computerPosition, true);
 		assertEquals("Sorry, you've Lost", message);
 
-		playerPosition.clear();
+		
 		computerPosition.clear();
 
 
-		/*playerPosition.add(2);
+		playerPosition.add(2);
 		computerPosition.add(1);
 		playerPosition.add(4);
 		computerPosition.add(3);
@@ -84,6 +91,5 @@ class TicTacToeGameTest {
 
 		message = TicTacToeGame.checkWinner(playerPosition, false);
 		assertEquals("Tie", message);
-		*/
 	}
 }
