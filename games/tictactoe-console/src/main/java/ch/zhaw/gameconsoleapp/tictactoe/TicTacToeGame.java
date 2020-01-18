@@ -36,7 +36,7 @@ public class TicTacToeGame {
         log.info("-- startTtt() called, game starts up --");
 
 
-        //the table is initialized with char and filled with the following symboles,
+        //the table is initialized with char and filled with the following symbols,
         //so it looks like a board in the output
 
         char[][] table = {{'1', '|', '2', '|', '3'},
