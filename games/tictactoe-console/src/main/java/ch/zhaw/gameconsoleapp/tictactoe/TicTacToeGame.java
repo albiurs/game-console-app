@@ -118,7 +118,7 @@ public class TicTacToeGame {
          * Method is used for console output of array table
          * @param table gives an output of the array table
          */
-        public static void createGameBoard ( char[][] table){
+        private static void createGameBoard ( char[][] table){
         for (char[] row : table) {
             for (char c : row) {
                 System.out.print(c);
@@ -221,7 +221,7 @@ public class TicTacToeGame {
             }
         }
         if ((playerPosition.size() >= 5)) {
-            return " Tie";
+            return "Tie";
         }
 
         return "";
