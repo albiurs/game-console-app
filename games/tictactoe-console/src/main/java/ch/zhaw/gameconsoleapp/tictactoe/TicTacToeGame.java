@@ -63,7 +63,7 @@ public class TicTacToeGame {
             }
             placePiece(table, playerPos, "Player");
 
-            String result = checkWinner();
+            String result = checkWinner(playerPosition, false);
             if (result.length() > 0) {
                 System.out.println(result);
                 break;
@@ -80,7 +80,7 @@ public class TicTacToeGame {
 
             createGameBoard(table);
 
-            result = checkWinner();
+            result = checkWinner(computerPosition, true);
             if (result.length() > 0) {
                 System.out.println(result);
                 break;
