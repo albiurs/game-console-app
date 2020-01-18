@@ -164,7 +164,7 @@ public class TicTacToeGame {
          * are all occupied by either player or computer generates the winning message
          * @return returns the winning message
          */
-        public static String checkWinner (ArrayList < Integer > positions, bool isComputer){
+        public static String checkWinner(ArrayList < Integer > positions, boolean isComputer){
 
         List topRow = Arrays.asList(1, 2, 3);
         List middleRow = Arrays.asList(4, 5, 6);
