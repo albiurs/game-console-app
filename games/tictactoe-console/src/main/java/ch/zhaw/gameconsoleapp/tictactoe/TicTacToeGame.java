@@ -15,18 +15,19 @@ import java.util.*;
 @Component
 public class TicTacToeGame {
 
-   // while(true){
+
         // == constants ==
         // Initialization of Slf4j logger.
         private static final Logger log = LoggerFactory.getLogger(TicTacToeGame.class);    // Initialization of Slf4j logger
+
 
         // == fields ==
         //Arraylist of integers of player and computerpositions
         private static ArrayList<Integer> playerPosition = new ArrayList<Integer>();
         private static ArrayList<Integer> computerPosition = new ArrayList<Integer>();
 
-        // == public methods ==
 
+        // == public methods ==
         /**
          *startTtt()
          * Starts the Tic Tac Toe Console Game and finishes after the user or computer has won
@@ -36,56 +37,81 @@ public class TicTacToeGame {
         log.info("-- startTtt() called, game starts up --");
 
 
-        //the table is initialized with char and filled with the following symbols,
-        //so it looks like a board in the output
 
-        char[][] table = {{'1', '|', '2', '|', '3'},
-                          {'-', '+', '-', '+', '-'},
-                          {'4', '|', '5', '|', '6'},
-                          {'-', '+', '-', '+', '-'},
-                          {'7', '|', '8', '|', '9'}};
+        // --- Start while loop to repeat game again ---
+        while(true) {
+            //the table is initialized with char and filled with the following symbols,
+            //so it looks like a board in the output
 
-        createGameBoard(table);
-
-        while (true) {
-
-            Scanner scan = new Scanner(System.in);
-            System.out.println("Choose from 1-9 where you want to put your X");
-
-            int playerPos = scan.nextInt();
-
-            //the while loop checks if the position is already taken by either the player or the computer
-            //so you cannot override the symbole of your counterpart will be repeated for the computer at line 62
-
-            while (playerPosition.contains(playerPos) || computerPosition.contains(playerPosition)) {
-                System.out.println("Position taken, take another");
-                playerPos = scan.nextInt();
-            }
-            placePiece(table, playerPos, "Player");
-
-            String result = checkWinner(playerPosition, false);
-            if (result.length() > 0) {
-                System.out.println(result);
-                break;
-            }
-
-            //randomizes where the computer will put a O on the board
-            Random rand = new Random();
-            int computerPos = rand.nextInt(9) + 1;
-            while (playerPosition.contains(computerPos) || computerPosition.contains(computerPos)) {
-                computerPos = rand.nextInt(9) + 1;
-            }
-
-            placePiece(table, computerPos, "Computer");
+            char[][] table = {{'1', '|', '2', '|', '3'},
+                    {'-', '+', '-', '+', '-'},
+                    {'4', '|', '5', '|', '6'},
+                    {'-', '+', '-', '+', '-'},
+                    {'7', '|', '8', '|', '9'}};
 
             createGameBoard(table);
 
-            result = checkWinner(computerPosition, true);
-            if (result.length() > 0) {
-                System.out.println(result);
-                break;
+            while (true) {
+
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Choose from 1-9 where you want to put your X");
+
+                int playerPos = scan.nextInt();
+
+                //the while loop checks if the position is already taken by either the player or the computer
+                //so you cannot override the symbole of your counterpart will be repeated for the computer at line 62
+
+                while (playerPosition.contains(playerPos) || computerPosition.contains(playerPosition)) {
+                    System.out.println("Position taken, take another");
+                    playerPos = scan.nextInt();
+                }
+                placePiece(table, playerPos, "Player");
+
+                String result = checkWinner(playerPosition, false);
+                if (result.length() > 0) {
+                    System.out.println(result);
+                    break;
+                }
+
+                //randomizes where the computer will put a O on the board
+                Random rand = new Random();
+                int computerPos = rand.nextInt(9) + 1;
+                while (playerPosition.contains(computerPos) || computerPosition.contains(computerPos)) {
+                    computerPos = rand.nextInt(9) + 1;
+                }
+
+                placePiece(table, computerPos, "Computer");
+
+                createGameBoard(table);
+
+                result = checkWinner(computerPosition, true);
+                if (result.length() > 0) {
+                    System.out.println(result);
+                    break;
+                }
             }
+
+            // clear ArrayLists with player and computer positions
+            playerPosition.clear();;
+            computerPosition.clear();
+
+            // Play again?
+            Scanner scanAgain = new Scanner(System.in);
+
+            System.out.println();
+            System.out.println("---------------------------------");
+            System.out.println("Do you want to play again? (y/n)?");
+
+            String playAnotherGame = scanAgain.nextLine().trim();
+
+            if (!playAnotherGame.equalsIgnoreCase("y")) {
+                break; // break out of while loop, if choice is anything but "y"
+            }
+
         }
+        // --- End of while loop to repeat game again ---
+
+
     }
 
         /**
@@ -202,14 +228,5 @@ public class TicTacToeGame {
 
 
     }
-      /*  // Asks to play again if true the game starts anew if not the game ends and returns to the main module
-        Scanner input = new Scanner(System.in);
-        System.out.println("Do you want to play again? Push 'Y' to play again push 'N' to stop playing.");
-        String name = input.nextLine();
-        if(name.equals("Y")){
-            return true;
-        }else{
-            return false;
-    }*/
 
 }
