@@ -17,6 +17,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 //@ExtendWith(MockitoExtension.class)		// JUnit 5: required for @InjectMocks and @Mock
 //@SpringBootTest(classes = NumberCalculator.class)
 
+/**
+ * NumberCalculatorTest
+ *
+ * @author created by Danian Kiarostami, on 2020-01-04
+ * @version 1.0
+ */
+
 public class MessageProviderImplTest {
 
     // == fields ==
