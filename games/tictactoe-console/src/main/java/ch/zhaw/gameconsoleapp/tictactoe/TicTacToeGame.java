@@ -15,9 +15,7 @@ import java.util.*;
 @Component
 public class TicTacToeGame {
 
-    while(true)
-
-    {
+   // while(true){
         // == constants ==
         // Initialization of Slf4j logger.
         private static final Logger log = LoggerFactory.getLogger(TicTacToeGame.class);    // Initialization of Slf4j logger
@@ -204,7 +202,7 @@ public class TicTacToeGame {
 
 
     }
-        // Asks to play again if true the game starts anew if not the game ends and returns to the main module
+      /*  // Asks to play again if true the game starts anew if not the game ends and returns to the main module
         Scanner input = new Scanner(System.in);
         System.out.println("Do you want to play again? Push 'Y' to play again push 'N' to stop playing.");
         String name = input.nextLine();
@@ -212,6 +210,6 @@ public class TicTacToeGame {
             return true;
         }else{
             return false;
-    }
+    }*/
 
 }
