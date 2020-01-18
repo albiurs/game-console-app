@@ -43,7 +43,7 @@ class TicTacToeGameTest {
 
 
 	@Test
-	void placePiece(char[][] table, int pos, String User) {
+	void placePiece() {
 	}
 
 	@Test
