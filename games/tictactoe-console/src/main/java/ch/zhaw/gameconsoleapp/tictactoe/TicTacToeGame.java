@@ -220,7 +220,7 @@ public class TicTacToeGame {
                 }
             }
         }
-        if ((playerPosition.size() >= 5)) {
+        if ((positions.size() >= 5)) {
             return "Tie";
         }
 

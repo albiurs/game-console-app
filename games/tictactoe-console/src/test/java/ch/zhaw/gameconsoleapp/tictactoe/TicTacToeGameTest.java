@@ -37,9 +37,6 @@ class TicTacToeGameTest {
 
 
 	// == JUnit tests ==
-
-
-
 	@Test
 	void placePiece() {
 
@@ -74,7 +71,7 @@ class TicTacToeGameTest {
 		message = TicTacToeGame.checkWinner(computerPosition, true);
 		assertEquals("Sorry, you've Lost", message);
 
-		
+
 		computerPosition.clear();
 
 
