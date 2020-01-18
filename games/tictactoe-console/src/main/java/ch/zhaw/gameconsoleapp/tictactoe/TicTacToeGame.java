@@ -214,7 +214,7 @@ public class TicTacToeGame {
         for (List l : winningConditions) {
             if (positions.containsAll(l)) {
                 if (isComputer) {
-                    return "Congrats, you've Lost";
+                    return "Sorry, you've Lost";
                 } else {
                     return "Congrats, you've Won";
                 }
