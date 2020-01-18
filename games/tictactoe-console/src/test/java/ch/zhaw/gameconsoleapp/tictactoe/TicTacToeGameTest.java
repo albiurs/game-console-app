@@ -1,4 +1,4 @@
-package ch.zhaw.gameconsoleapp.guessnumber.console.controller;
+package ch.zhaw.gameconsoleapp.tictactoe;
 
 import ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGame;
 import org.junit.jupiter.api.Test;
