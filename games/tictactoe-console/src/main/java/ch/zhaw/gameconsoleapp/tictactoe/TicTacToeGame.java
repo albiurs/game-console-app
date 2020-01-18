@@ -164,7 +164,7 @@ public class TicTacToeGame {
      * are all occupied by either player or computer generates the winning message
      * @return returns the winning message
      */
-    public static String checkWinner(){
+    public static String checkWinner(ArrayList<Integer> positions, bool isComputer){
 
         List topRow = Arrays.asList(1,2,3);
         List middleRow = Arrays.asList(4,5,6);
@@ -185,16 +185,24 @@ public class TicTacToeGame {
         winningConditions.add(uplLeftRightBottom);
         winningConditions.add(upRightLeftBottom);
 
-        //output of the message after one of the winning condition is right for the list
         for(List l : winningConditions){
-            if(playerPosition.containsAll(l)) {
-                return "Congrats, you've Won";
-            }else if(computerPosition.containsAll(l)){
-                return " Too bad, you've lost";
-            }else if(playerPosition.size() + computerPosition.size() == 9){
-                return " Tie";
+            if(positions.containsAll(l)) {
+                if(isComputer){
+                    return "Congrats, you've Lost";
+                }
+                else{
+                    return "Congrats, you've Won";
+                }
             }
         }
-        return"";
+        if((playerPosition.size() >= 5)){
+            return " Tie";
+        }
+
+        return "";
+
+
+
     }
+
 }
