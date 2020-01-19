@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ch.zhaw.gameconsoleapp.guessnumber</OriginalElement>
+  <nodes>
+    <node x="385.5" y="2460.5">ch.zhaw.gameconsoleapp.guessnumber.web.util.ViewNameUrlMappings</node>
+    <node x="1154.0" y="304.5">ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProviderImpl</node>
+    <node x="1959.0" y="68.5">ch.zhaw.gameconsoleapp.guessnumber.components.NumberCalculatorImplTest</node>
+    <node x="-21.0" y="2741.5">ch.zhaw.gameconsoleapp.guessnumber.web.util.thymeleaf.DecoupledLogicSetup</node>
+    <node x="360.0" y="402.5">ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProvider</node>
+    <node x="2026.0" y="337.5">ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculatorImpl</node>
+    <node x="1144.5" y="2745.5">ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface.MaxNumber</node>
+    <node x="2034.0" y="671.5">ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculator</node>
+    <node x="2824.5" y="-14.5">ch.zhaw.gameconsoleapp.guessnumber.core.config.AppConfig</node>
+    <node x="1176.0" y="1110.5">ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicService</node>
+    <node x="2336.0" y="979.5">ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicServiceImpl</node>
+    <node x="504.0" y="2751.5">ch.zhaw.gameconsoleapp.guessnumber.console.controller.GuessNumberConsoleControllerTest</node>
+    <node x="2768.0" y="108.5">ch.zhaw.gameconsoleapp.guessnumber.core.config.GameConfig</node>
+    <node x="714.0" y="570.5">ch.zhaw.gameconsoleapp.guessnumber.console.controller.GuessNumberConsoleController</node>
+    <node x="360.0" y="1929.5">ch.zhaw.gameconsoleapp.guessnumber.web.service.WebGameLogicService</node>
+    <node x="876.5" y="2745.5">ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface.DefaultGuessCount</node>
+    <node x="746.0" y="2053.5">ch.zhaw.gameconsoleapp.guessnumber.web.config.WebConfig</node>
+    <node x="-23.0" y="2202.5">ch.zhaw.gameconsoleapp.guessnumber.web.util.AttributeNames</node>
+    <node x="314.0" y="1555.5">ch.zhaw.gameconsoleapp.guessnumber.web.service.WebGameLogicServiceImpl</node>
+    <node x="315.5" y="2159.5">ch.zhaw.gameconsoleapp.guessnumber.web.controller.WebController</node>
+    <node x="1344.5" y="2745.5">ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface.MinNumber</node>
+    <node x="829.5" y="2191.5">ch.zhaw.gameconsoleapp.guessnumber.web.util.ViewNameDefinitions</node>
+    <node x="1616.5" y="370.5">ch.zhaw.gameconsoleapp.guessnumber.components.MessageProviderImplTest</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculatorImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculator">
+      <point x="0.0" y="102.5" />
+      <point x="0.0" y="-48.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.util.thymeleaf.DecoupledLogicSetup" target="ch.zhaw.gameconsoleapp.guessnumber.web.util.thymeleaf.DecoupledLogicSetup">
+      <point x="0.0" y="58.5" />
+      <point x="160.0" y="2920.0" />
+      <point x="400.0" y="2920.0" />
+      <point x="400.0" y="2800.0" />
+      <point x="181.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.config.WebConfig" target="ch.zhaw.gameconsoleapp.guessnumber.web.util.ViewNameDefinitions">
+      <point x="0.0" y="26.5" />
+      <point x="0.0" y="-48.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.components.NumberCalculatorImplTest" target="ch.zhaw.gameconsoleapp.guessnumber.components.NumberCalculatorImplTest">
+      <point x="161.0" y="-0.0" />
+      <point x="2360.0" y="160.0" />
+      <point x="2360.0" y="0.0" />
+      <point x="2120.0" y="0.0" />
+      <point x="0.0" y="-91.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.service.WebGameLogicServiceImpl" target="ch.zhaw.gameconsoleapp.guessnumber.web.service.WebGameLogicServiceImpl">
+      <point x="40.0" y="124.5" />
+      <point x="520.0" y="1880.0" />
+      <point x="720.0" y="1880.0" />
+      <point x="720.0" y="1720.0" />
+      <point x="166.0" y="40.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.components.MessageProviderImplTest" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProviderImpl">
+      <point x="0.0" y="-69.5" />
+      <point x="1760.0" y="240.0" />
+      <point x="1320.0" y="240.0" />
+      <point x="0.0" y="-135.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.console.controller.GuessNumberConsoleController" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProvider">
+      <point x="-166.0" y="-0.0" />
+      <point x="520.0" y="640.0" />
+      <point x="40.0" y="37.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicServiceImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculator">
+      <point x="-144.0" y="-120.0" />
+      <point x="2120.0" y="1160.0" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.service.WebGameLogicServiceImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicService">
+      <point x="40.0" y="-124.5" />
+      <point x="520.0" y="1320.0" />
+      <point x="-144.0" y="40.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicServiceImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicService">
+      <point x="-144.0" y="-0.0" />
+      <point x="144.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.console.controller.GuessNumberConsoleController" target="ch.zhaw.gameconsoleapp.guessnumber.console.controller.GuessNumberConsoleController">
+      <point x="40.0" y="69.5" />
+      <point x="920.0" y="800.0" />
+      <point x="1120.0" y="800.0" />
+      <point x="1120.0" y="680.0" />
+      <point x="166.0" y="40.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculatorImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculatorImpl">
+      <point x="40.0" y="102.5" />
+      <point x="2160.0" y="600.0" />
+      <point x="2280.0" y="600.0" />
+      <point x="2280.0" y="480.0" />
+      <point x="94.0" y="40.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.controller.WebController" target="ch.zhaw.gameconsoleapp.guessnumber.web.util.ViewNameUrlMappings">
+      <point x="0.0" y="80.5" />
+      <point x="0.0" y="-59.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.config.GameConfig" target="ch.zhaw.gameconsoleapp.guessnumber.core.config.GameConfig">
+      <point x="0.0" y="91.5" />
+      <point x="2880.0" y="360.0" />
+      <point x="3040.0" y="360.0" />
+      <point x="3040.0" y="200.0" />
+      <point x="112.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.controller.WebController" target="ch.zhaw.gameconsoleapp.guessnumber.web.controller.WebController">
+      <point x="40.0" y="80.5" />
+      <point x="520.0" y="2400.0" />
+      <point x="720.0" y="2400.0" />
+      <point x="720.0" y="2280.0" />
+      <point x="164.5" y="40.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProviderImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicService">
+      <point x="166.0" y="40.0" />
+      <point x="1560.0" y="480.0" />
+      <point x="1560.0" y="1240.0" />
+      <point x="144.0" y="-40.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.util.ViewNameUrlMappings" target="ch.zhaw.gameconsoleapp.guessnumber.web.util.ViewNameUrlMappings">
+      <point x="0.0" y="59.5" />
+      <point x="480.0" y="2640.0" />
+      <point x="640.0" y="2640.0" />
+      <point x="640.0" y="2520.0" />
+      <point x="94.5" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicServiceImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculatorImpl">
+      <point x="0.0" y="-300.5" />
+      <point x="2480.0" y="440.0" />
+      <point x="94.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.service.WebGameLogicServiceImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProvider">
+      <point x="0.0" y="-124.5" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.components.MessageProviderImplTest" target="ch.zhaw.gameconsoleapp.guessnumber.components.MessageProviderImplTest">
+      <point x="-40.0" y="-69.5" />
+      <point x="1720.0" y="280.0" />
+      <point x="1560.0" y="280.0" />
+      <point x="1560.0" y="400.0" />
+      <point x="-143.5" y="-40.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.components.NumberCalculatorImplTest" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculatorImpl">
+      <point x="0.0" y="91.5" />
+      <point x="0.0" y="-102.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProviderImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProviderImpl">
+      <point x="-40.0" y="-135.5" />
+      <point x="1280.0" y="240.0" />
+      <point x="1080.0" y="240.0" />
+      <point x="1080.0" y="400.0" />
+      <point x="-166.0" y="-40.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.components.MessageProviderImplTest" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculatorImpl">
+      <point x="143.5" y="-0.0" />
+      <point x="-94.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicServiceImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicServiceImpl">
+      <point x="0.0" y="300.5" />
+      <point x="2480.0" y="1640.0" />
+      <point x="2680.0" y="1640.0" />
+      <point x="2680.0" y="1280.0" />
+      <point x="144.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.controller.WebController" target="ch.zhaw.gameconsoleapp.guessnumber.web.util.ViewNameDefinitions">
+      <point x="164.5" y="-0.0" />
+      <point x="-90.5" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProviderImpl" target="ch.zhaw.gameconsoleapp.guessnumber.core.components.MessageProvider">
+      <point x="-166.0" y="-0.0" />
+      <point x="120.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.core.config.AppConfig" target="ch.zhaw.gameconsoleapp.guessnumber.core.config.GameConfig">
+      <point x="0.0" y="14.5" />
+      <point x="0.0" y="-91.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.service.WebGameLogicServiceImpl" target="ch.zhaw.gameconsoleapp.guessnumber.web.service.WebGameLogicService">
+      <point x="0.0" y="124.5" />
+      <point x="0.0" y="-70.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.console.controller.GuessNumberConsoleController" target="ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicService">
+      <point x="0.0" y="69.5" />
+      <point x="880.0" y="1280.0" />
+      <point x="-144.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.controller.WebController" target="ch.zhaw.gameconsoleapp.guessnumber.web.service.WebGameLogicService">
+      <point x="0.0" y="-80.5" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.components.MessageProviderImplTest" target="ch.zhaw.gameconsoleapp.guessnumber.core.service.CoreGameLogicServiceImpl">
+      <point x="143.5" y="40.0" />
+      <point x="1960.0" y="480.0" />
+      <point x="1960.0" y="1200.0" />
+      <point x="-144.0" y="-80.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.guessnumber.web.controller.WebController" target="ch.zhaw.gameconsoleapp.guessnumber.web.util.AttributeNames">
+      <point x="-164.5" y="-0.0" />
+      <point x="103.0" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Directed Orthogonal" zoom="0.4531665834118577" x="1353.2612926450092" y="660.1086234743707" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

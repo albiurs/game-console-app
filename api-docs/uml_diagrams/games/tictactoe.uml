@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ch.zhaw.gameconsoleapp.tictactoe</OriginalElement>
+  <nodes>
+    <node x="65.0" y="257.5">ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGame</node>
+    <node x="-7.0" y="613.5">ch.zhaw.gameconsoleapp.tictactoe.TicTacToeCoreDummy</node>
+    <node x="117.5" y="-0.5">ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGameTest</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ch.zhaw.gameconsoleapp.tictactoe.TicTacToeCoreDummy" target="ch.zhaw.gameconsoleapp.tictactoe.TicTacToeCoreDummy">
+      <point x="0.0" y="26.5" />
+      <point x="80.0" y="720.0" />
+      <point x="240.0" y="720.0" />
+      <point x="240.0" y="640.0" />
+      <point x="87.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGame" target="ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGame">
+      <point x="-175.0" y="-0.0" />
+      <point x="0.0" y="360.0" />
+      <point x="0.0" y="520.0" />
+      <point x="240.0" y="520.0" />
+      <point x="0.0" y="102.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGameTest" target="ch.zhaw.gameconsoleapp.tictactoe.TicTacToeGame">
+      <point x="0.0" y="80.5" />
+      <point x="0.0" y="-102.5" />
+    </edge>
+  </edges>
+  <settings layout="Directed Orthogonal" zoom="1.0" x="256.0" y="229.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
