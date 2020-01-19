@@ -12,14 +12,14 @@ import org.springframework.stereotype.Component;
  * @version 0.0.1
  */
 @Component
-public class GameOfLifeCoreDummy {
+public class GameOfLifeGuiController {
 
 	// == constants ==
-	private static final Logger log = LoggerFactory.getLogger(GameOfLifeCoreDummy.class);	// Initialization of Slf4j logger
+	private static final Logger log = LoggerFactory.getLogger(GameOfLifeGuiController.class);	// Initialization of Slf4j logger
 
 	// == constructors ==
 	@Autowired
-	public GameOfLifeCoreDummy() {
+	public GameOfLifeGuiController() {
 		log.info("-- Constructor GameOfLifeCoreDummy() called --");
 	}
 }
