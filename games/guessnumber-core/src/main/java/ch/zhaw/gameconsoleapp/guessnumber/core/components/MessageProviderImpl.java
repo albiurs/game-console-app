@@ -22,8 +22,8 @@ public class MessageProviderImpl implements MessageProvider {
 
 	// == constants ==
 	private static final Logger log = LoggerFactory.getLogger(MessageProviderImpl.class);
-	public static final String LoseMessage = "You lost! The number was: ";
-	public static final String WinMessage = "You guessed it! The number was: ";
+	private static final String LoseMessage = "You lost! The number was: ";
+	private static final String WinMessage = "You guessed it! The number was: ";
 
 	// == fields ==
 	private final CoreGameLogicService coreGameLogicService;
@@ -103,5 +103,13 @@ public class MessageProviderImpl implements MessageProvider {
 			}
 			return direction + "You have " + coreGameLogicService.getRemainingGuesses() + " guesses left.";
 		}
+	}
+
+	public String getLoseMessage() {
+		return LoseMessage;
+	}
+
+	public String getWinMessage() {
+		return WinMessage;
 	}
 }

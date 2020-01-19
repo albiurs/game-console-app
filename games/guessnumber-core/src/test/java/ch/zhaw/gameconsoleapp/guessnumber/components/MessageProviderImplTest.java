@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 //@SpringBootTest(classes = NumberCalculator.class)
 
 /**
- * NumberCalculatorTest
+ * MessageProviderImplTest
  *
  * @author created by Danian Kiarostami, on 2020-01-04
  * @version 1.0
@@ -26,9 +26,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MessageProviderImplTest {
 
+
     // == fields ==
     @InjectMocks
     private MessageProviderImpl messageProvider;
+
 
     // == setup & teardown ==
     @BeforeEach
@@ -39,6 +41,7 @@ public class MessageProviderImplTest {
     void tearDown() {
     }
 
+
     // == JUnit tests ==
     @Test
     void getPostGuessMessage(){
@@ -48,10 +51,10 @@ public class MessageProviderImplTest {
         gameService.setGuessedNumber(numberToGuess);
 
         messageProvider = new MessageProviderImpl(gameService);
-        assertEquals(messageProvider.getPostGuessMessage(), messageProvider.WinMessage + gameService.getRandomNumberToGuess());
+        assertEquals(messageProvider.getPostGuessMessage(), messageProvider.getWinMessage() + gameService.getRandomNumberToGuess());
 
 
         gameService.setGuessedNumber(numberToGuess-1);
-        assertEquals(messageProvider.getPostGuessMessage(), messageProvider.LoseMessage + gameService.getRandomNumberToGuess());
+        assertEquals(messageProvider.getPostGuessMessage(), messageProvider.getLoseMessage() + gameService.getRandomNumberToGuess());
     }
 }

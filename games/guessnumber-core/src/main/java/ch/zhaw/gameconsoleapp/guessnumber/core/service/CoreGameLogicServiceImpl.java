@@ -2,6 +2,7 @@ package ch.zhaw.gameconsoleapp.guessnumber.core.service;
 
 import ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface.DefaultGuessCount;
 import ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculator;
+import ch.zhaw.gameconsoleapp.guessnumber.core.components.NumberCalculatorImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,17 @@ public class CoreGameLogicServiceImpl implements CoreGameLogicService {
 		this.numberCalculator = numberCalculator;
 		log.info("Constructor GameImpl() called. Initialized numberCalculator = {}", numberCalculator);
 		this.defaultGuessCount = defaultGuessCount;
+		log.info("Constructor GameImpl() called. Initialized defaultGuessCount = {}", defaultGuessCount);
+	}
+
+	/**
+	 * CoreGameLogicServiceImpl()
+	 * Default Constructor required for JUnit tests.
+	 */
+	public CoreGameLogicServiceImpl() {
+		this.numberCalculator = new NumberCalculatorImpl();
+		log.info("Constructor GameImpl() called. Initialized numberCalculator = {}", numberCalculator);
+		this.defaultGuessCount = 10;
 		log.info("Constructor GameImpl() called. Initialized defaultGuessCount = {}", defaultGuessCount);
 	}
 

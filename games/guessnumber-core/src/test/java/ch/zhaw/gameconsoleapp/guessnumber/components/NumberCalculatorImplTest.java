@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * NumberCalculatorTest
+ * NumberCalculatorImplTest
  *
  * @author created by Urs Albisser, on 2020-01-04
  * @version 1.0
@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @ExtendWith(SpringExtension.class)
 //@ExtendWith(MockitoExtension.class)		// JUnit 5: required for @InjectMocks and @Mock
 //@SpringBootTest(classes = NumberCalculator.class)
-public class NumberCalculatorTest {
+public class NumberCalculatorImplTest {
 
 
 	// == fields ==
