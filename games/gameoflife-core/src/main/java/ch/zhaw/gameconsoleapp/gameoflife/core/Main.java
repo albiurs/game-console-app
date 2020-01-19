@@ -7,13 +7,15 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    
+
     /**
      * == public methods ==
      */
     @Override
     public void start(Stage stage) {
         /**
-         * creating of a new object of type "MainActivities"
+         * creating of a new object of type "..."
          */
         GameServiceMainOperations gameServiceMainOperations = new GameServiceMainOperations();
         /**
