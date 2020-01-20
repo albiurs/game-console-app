@@ -52,6 +52,8 @@ public class RandomJokeController {
 	public void startRandomJokeCrawler() {
 
 		log.info("RandomJokeController.startRandomJokeCrawler called ");
+		System.out.println("------------------------");
+		System.out.println();
 
 		Scanner scanner = new Scanner(System.in);
 
