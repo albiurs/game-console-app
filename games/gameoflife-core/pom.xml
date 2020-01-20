@@ -20,6 +20,15 @@
     <artifactId>gameoflife-core</artifactId>
 
 
+    <!-- Properties -->
+    <properties>
+
+        <!-- JavaFX Version-->
+        <javafx.version>11.0.2</javafx.version>
+
+    </properties>
+
+
     <!-- Dependencies -->
     <dependencies>
 
@@ -31,6 +40,50 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <!-- JavaFX -->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-graphics -->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-swing -->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-web -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.openjfx</groupId>-->
+<!--            <artifactId>javafx-media</artifactId>-->
+<!--            <version>${javafx.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.openjfx</groupId>-->
+<!--            <artifactId>javafx-graphics</artifactId>-->
+<!--            <version>${javafx.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.openjfx</groupId>-->
+<!--            <artifactId>javafx-swing</artifactId>-->
+<!--            <version>${javafx.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.openjfx</groupId>-->
+<!--            <artifactId>javafx-web</artifactId>-->
+<!--            <version>${javafx.version}</version>-->
+<!--        </dependency>-->
+        
     </dependencies>
 
 

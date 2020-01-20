@@ -26,7 +26,6 @@
 
     <!-- Sub-modules -->
     <modules>
-        <module>gameoflife-console</module>
         <module>gameoflife-core</module>
         <module>gameoflife-gui</module>
         <module>guessnumber-console</module>
