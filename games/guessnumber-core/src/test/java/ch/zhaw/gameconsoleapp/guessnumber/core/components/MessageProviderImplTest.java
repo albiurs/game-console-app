@@ -33,6 +33,7 @@ public class MessageProviderImplTest {
     // == setup & teardown ==
     @BeforeEach
     void setUp() {
+
     }
 
     @AfterEach
@@ -54,5 +55,15 @@ public class MessageProviderImplTest {
 
         gameService.setGuessedNumber(numberToGuess-1);
         assertEquals(messageProvider.getPostGuessMessage(), messageProvider.getLoseMessage() + gameService.getRandomNumberToGuess());
+    }
+
+    @Test
+    void getPreGuessMessage() {
+
+    }
+
+    @Test
+    void getLoseMessage() {
+
     }
 }
