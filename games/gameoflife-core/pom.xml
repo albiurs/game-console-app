@@ -83,20 +83,8 @@
 <!--            <artifactId>javafx-web</artifactId>-->
 <!--            <version>${javafx.version}</version>-->
 <!--        </dependency>-->
-
-
+        
     </dependencies>
-
-    <!-- Build -->
-    <build>
-
-        <!-- Plugins -->
-        <plugins>
-
-
-        </plugins>
-
-    </build>
 
 
 </project>
