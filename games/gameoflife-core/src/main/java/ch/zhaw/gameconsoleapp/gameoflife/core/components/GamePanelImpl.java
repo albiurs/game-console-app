@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * this class contains methods which describe the stats visible on the game panel
- * the methods "copyState", "getState" and "setState" have been successfully test with JUnit (see "GamePanelImplTest")
+ * the methods "copyState", "getState" and "setState" have been successfully test with JUnit (see "GamePanelTest")
  *
  * @author created by Slavisa Obradovic, on 2020-01-01
  * @version 1.0
@@ -18,18 +18,18 @@ public class GamePanelImpl implements GamePanel {
     /**
      * width of the game panel
      */
-    private int width;
+    public int width;
     /**
      * height of the game panel
      */
-    private int height;
+    public int height;
 
     // == fields ==
 
     /**
      * 2D-Array of the game panel
      */
-    private PixelState[][] gamePanel;
+    public PixelState[][] gamePanel;
 
     // == constructors ==
 

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * 2. any live cell with two or three live neighbours lives on to the next generation
  * 3. any live cell with more than three live neighbours dies, as if by overpopulation
  * 4. any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction
- * the rules have been successfully test with JUnit (see "RulesImplTest")
+ * the rules have been successfully test with JUnit (see "RulesTest")
  *
  *  @author created by Slavisa Obradovic, on 2020-01-01
  *  @version 1.0

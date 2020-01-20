@@ -62,7 +62,6 @@ public class GameServiceMainOperations extends VBox {
      */
     private GameServiceStepwiseSimulationMode gameServiceStepwiseSimulationMode;
     private GamePanel originalGamePanel;
-    private GameServiceButtons buttons;
 
     // == constructors ==
     @Autowired
@@ -83,11 +82,12 @@ public class GameServiceMainOperations extends VBox {
         /**
          * initializing and creating of a new object of type "GameServiceButtons"
          */
-        this.buttons = new GameServiceButtons(this);
+        GameServiceButtons buttons;
+        buttons = new GameServiceButtons(this);
         /**
          * adding the canvas and buttons to the VBox
          */
-        this.getChildren().addAll(this.canvas, this.buttons);
+        this.getChildren().addAll(this.canvas, buttons);
         /**
          * initializing and creating of a new object of type "Affine" and scaling the game panel by factor 20 (the
          * factor is choose by chance)

@@ -54,10 +54,6 @@ public class NumberCalculatorTest {
 			assertTrue(!(minInt < randomInt) || !(randomInt > maxInt));
 		}
 
-
-
-
-
 	}
 
 	@Test
