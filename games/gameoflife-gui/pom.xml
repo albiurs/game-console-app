@@ -20,15 +20,6 @@
     <artifactId>gameoflife-gui</artifactId>
 
 
-    <!-- Properties -->
-    <properties>
-
-        <!-- JavaFX Version-->
-        <javafx.version>11.0.2</javafx.version>
-
-    </properties>
-
-
     <!-- Dependencies -->
     <dependencies>
 
