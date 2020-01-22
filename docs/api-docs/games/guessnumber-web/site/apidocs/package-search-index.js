@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"ch.zhaw.gameconsoleapp.guessnumber.web.config"},{"l":"ch.zhaw.gameconsoleapp.guessnumber.web.controller"},{"l":"ch.zhaw.gameconsoleapp.guessnumber.web.service"},{"l":"ch.zhaw.gameconsoleapp.guessnumber.web.util"},{"l":"ch.zhaw.gameconsoleapp.guessnumber.web.util.thymeleaf"}]

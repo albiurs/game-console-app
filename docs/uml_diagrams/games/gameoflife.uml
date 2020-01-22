@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ch.zhaw.gameconsoleapp.gameoflife</OriginalElement>
+  <nodes>
+    <node x="-29.5" y="2573.5">ch.zhaw.gameconsoleapp.gameoflife.gui.GameOfLifeGui</node>
+    <node x="63.0" y="78.5">ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations</node>
+    <node x="743.0" y="1788.5">ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceAutoSimulationMode</node>
+    <node x="2091.5" y="1413.5">ch.zhaw.gameconsoleapp.gameoflife.core.components.Rules</node>
+    <node x="2080.5" y="1191.5">ch.zhaw.gameconsoleapp.gameoflife.core.components.RulesImpl</node>
+    <node x="1380.5" y="1570.5">ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceStepwiseSimulationMode</node>
+    <node x="768.0" y="2166.5">ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceButtons</node>
+    <node x="2501.0" y="1042.5">ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState</node>
+    <node x="1756.5" y="566.5">ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanelImpl</node>
+    <node x="1756.5" y="1009.5">ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanel</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceStepwiseSimulationMode" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.Rules">
+      <point x="139.5" y="-13.333333333333371" />
+      <point x="2440.0" y="1626.6666666666665" />
+      <point x="2440.0" y="1460.0" />
+      <point x="148.5" y="20.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.RulesImpl">
+      <point x="220.0" y="201.5" />
+      <point x="540.0" y="880.0" />
+      <point x="2240.0" y="880.0" />
+      <point x="0.0" y="-48.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.RulesImpl" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState">
+      <point x="159.5" y="-0.0" />
+      <point x="2440.0" y="1240.0" />
+      <point x="2440.0" y="1110.0" />
+      <point x="-59.0" y="30.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.RulesImpl" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.RulesImpl">
+      <point x="40.0" y="48.5" />
+      <point x="2280.0" y="1360.0" />
+      <point x="2480.0" y="1360.0" />
+      <point x="2480.0" y="1280.0" />
+      <point x="159.5" y="40.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceButtons" target="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceButtons">
+      <point x="-232.0" y="40.0" />
+      <point x="720.0" y="2320.0" />
+      <point x="720.0" y="2480.0" />
+      <point x="1000.0" y="2480.0" />
+      <point x="0.0" y="113.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.Rules" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState">
+      <point x="148.5" y="-0.0" />
+      <point x="2520.0" y="1440.0" />
+      <point x="-40.0" y="37.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceAutoSimulationMode" target="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations">
+      <point x="-40.0" y="-91.5" />
+      <point x="960.0" y="1720.0" />
+      <point x="420.0" y="1720.0" />
+      <point x="100.0" y="201.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanel">
+      <point x="180.0" y="201.5" />
+      <point x="500.0" y="1080.0" />
+      <point x="-123.5" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceButtons" target="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceAutoSimulationMode">
+      <point x="0.0" y="-113.5" />
+      <point x="0.0" y="91.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceStepwiseSimulationMode" target="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceStepwiseSimulationMode">
+      <point x="-139.5" y="40.0" />
+      <point x="1320.0" y="1680.0" />
+      <point x="1320.0" y="1800.0" />
+      <point x="1480.0" y="1800.0" />
+      <point x="-40.0" y="69.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceAutoSimulationMode" target="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceStepwiseSimulationMode">
+      <point x="0.0" y="-91.5" />
+      <point x="1000.0" y="1640.0" />
+      <point x="-139.5" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations" target="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations">
+      <point x="-40.0" y="-201.5" />
+      <point x="280.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="280.0" />
+      <point x="-257.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.gui.GameOfLifeGui" target="ch.zhaw.gameconsoleapp.gameoflife.gui.GameOfLifeGui">
+      <point x="0.0" y="26.5" />
+      <point x="40.0" y="2680.0" />
+      <point x="160.0" y="2680.0" />
+      <point x="160.0" y="2600.0" />
+      <point x="69.5" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanelImpl" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState">
+      <point x="40.0" y="113.5" />
+      <point x="1920.0" y="840.0" />
+      <point x="2520.0" y="840.0" />
+      <point x="-40.0" y="-37.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanel" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanel">
+      <point x="123.5" y="-40.0" />
+      <point x="2080.0" y="1040.0" />
+      <point x="2080.0" y="920.0" />
+      <point x="1920.0" y="920.0" />
+      <point x="40.0" y="-70.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanelImpl">
+      <point x="240.0" y="201.5" />
+      <point x="560.0" y="680.0" />
+      <point x="-123.5" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations" target="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceStepwiseSimulationMode">
+      <point x="120.0" y="201.5" />
+      <point x="440.0" y="1600.0" />
+      <point x="-139.5" y="-40.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceStepwiseSimulationMode" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanel">
+      <point x="139.5" y="-40.0" />
+      <point x="1840.0" y="1600.0" />
+      <point x="-40.0" y="70.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanelImpl" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanelImpl">
+      <point x="123.5" y="-40.0" />
+      <point x="2120.0" y="640.0" />
+      <point x="2120.0" y="480.0" />
+      <point x="1960.0" y="480.0" />
+      <point x="80.0" y="-113.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceButtons" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState">
+      <point x="232.0" y="-0.0" />
+      <point x="2560.0" y="2280.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceButtons" target="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations">
+      <point x="-232.0" y="-0.0" />
+      <point x="320.0" y="2280.0" />
+      <point x="0.0" y="201.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.Rules" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanel">
+      <point x="-148.5" y="-0.0" />
+      <point x="1880.0" y="1440.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.RulesImpl" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.Rules">
+      <point x="0.0" y="48.5" />
+      <point x="0.0" y="-26.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.RulesImpl" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanel">
+      <point x="-159.5" y="-0.0" />
+      <point x="1920.0" y="1240.0" />
+      <point x="40.0" y="70.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations" target="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceButtons">
+      <point x="40.0" y="201.5" />
+      <point x="360.0" y="2080.0" />
+      <point x="920.0" y="2080.0" />
+      <point x="-80.0" y="-113.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanel" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState">
+      <point x="123.5" y="-0.0" />
+      <point x="-59.0" y="-0.0" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceMainOperations" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState">
+      <point x="0.0" y="-201.5" />
+      <point x="320.0" y="0.0" />
+      <point x="2560.0" y="0.0" />
+      <point x="0.0" y="-37.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.service.GameServiceStepwiseSimulationMode" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState">
+      <point x="139.5" y="-0.0" />
+      <point x="2540.0" y="1640.0" />
+      <point x="-20.0" y="37.5" />
+    </edge>
+    <edge source="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanelImpl" target="ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanel">
+      <point x="0.0" y="113.5" />
+      <point x="0.0" y="-70.5" />
+    </edge>
+  </edges>
+  <settings layout="Directed Orthogonal" zoom="0.30000000000000016" x="1077.3333333333321" y="1033.9999999999995" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

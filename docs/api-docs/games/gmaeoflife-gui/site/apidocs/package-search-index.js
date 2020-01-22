@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"gameoflife.gui","l":"ch.zhaw.gameconsoleapp.gameoflife.gui"}]

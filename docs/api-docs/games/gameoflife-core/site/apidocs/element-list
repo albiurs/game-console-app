@@ -1,0 +1,3 @@
+module:gameoflife.core
+ch.zhaw.gameconsoleapp.gameoflife.core.components
+ch.zhaw.gameconsoleapp.gameoflife.core.service

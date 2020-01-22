@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"ch.zhaw.gameconsoleapp","c":"MainWeb","l":"main(String[])","url":"main(java.lang.String[])"},{"p":"ch.zhaw.gameconsoleapp","c":"MainWeb","l":"MainWeb()","url":"%3Cinit%3E()"}]

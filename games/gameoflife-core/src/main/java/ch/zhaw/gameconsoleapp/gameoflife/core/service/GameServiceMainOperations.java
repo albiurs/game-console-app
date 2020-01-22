@@ -95,7 +95,6 @@ public class GameServiceMainOperations extends VBox {
          * initializing and creating of a new object of type "GamePanelImpl" with the corresponding width and height
          * (the numbers are choose by chance)
          */
-//        this.originalGamePanel = new GamePanelImpl(20, 20);
         this.originalGamePanel = new GamePanelImpl();
     }
 

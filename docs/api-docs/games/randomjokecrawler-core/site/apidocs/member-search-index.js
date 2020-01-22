@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"ch.zhaw.gameconsoleapp.randomjokecrawler.core","c":"RandomJokeCrawler","l":"getRandomJoke()"},{"p":"ch.zhaw.gameconsoleapp.randomjokecrawler.core","c":"RandomJokeCrawler","l":"RandomJokeCrawler()","url":"%3Cinit%3E()"}]

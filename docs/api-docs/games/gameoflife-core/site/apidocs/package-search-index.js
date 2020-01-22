@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"gameoflife.core","l":"ch.zhaw.gameconsoleapp.gameoflife.core.components"},{"m":"gameoflife.core","l":"ch.zhaw.gameconsoleapp.gameoflife.core.service"}]

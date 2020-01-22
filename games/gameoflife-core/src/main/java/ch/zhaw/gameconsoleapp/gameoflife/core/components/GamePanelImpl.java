@@ -34,13 +34,10 @@ public class GamePanelImpl implements GamePanel {
     // == constructors ==
 
     @Autowired
-//    public GamePanelImpl(int width, int height) {
     public GamePanelImpl() {
         /**
          * initialization of the instance variables
          */
-//        this.width = width;
-//        this.height = height;
         this.width = 20;
         this.height = 20;
         /**
@@ -67,7 +64,6 @@ public class GamePanelImpl implements GamePanel {
         /**
          * create a new "GamePanelImpl" object with the name "copy"
          */
-//        GamePanelImpl copy = new GamePanelImpl(this.width, this.height);
         GamePanelImpl copy = new GamePanelImpl();
         /**
          * looping (screening) over the entire game panel and assign (set) to the "copy" object the state which has

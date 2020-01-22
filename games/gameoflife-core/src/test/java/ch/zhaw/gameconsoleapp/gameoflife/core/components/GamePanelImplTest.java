@@ -46,7 +46,7 @@
 //         * test with different sizes of the board (width, height), not only square sizes (e.g. 20 x 20), but also where
 //         * the width and height are not the same
 //         */
-//        this.gamePanel = new GamePanelImpl(1000, 2000);
+//        this.gamePanel = new GamePanelImpl();
 //
 //    }
 //
@@ -67,8 +67,8 @@
 //    void copyState_preservingSize() {
 //        GamePanel copyState_preservingSize = gamePanel.copyState();
 //
-//        assertEquals(1000, copyState_preservingSize.panelWidth());
-//        assertEquals(2000, copyState_preservingSize.panelHeight());
+//        assertEquals(20, copyState_preservingSize.panelWidth());
+//        assertEquals(20, copyState_preservingSize.panelHeight());
 //    }
 //
 //    /**
@@ -87,19 +87,6 @@
 //                assertEquals(gamePanel.getState(x, y), copyState_preservingContent.getState(x, y));
 //            }
 //        }
-//    }
-//
-//    /**
-//     * third test would be: changing the new instance does not change the old one
-//     */
-//    @Test
-//    void copyState_InstancesStateCheck() {
-//        GamePanel copyState_InstancesStateCheck = gamePanel.copyState();
-//
-//        copyState_InstancesStateCheck.setState(50, 40, PixelState.ALIVE_STATE);
-//
-//        assertEquals(PixelState.ALIVE_STATE, copyState_InstancesStateCheck.getState(50, 40));
-//        assertEquals(PixelState.DEAD_STATE, gamePanel.getState(50, 40));
 //    }
 //
 //    /**

@@ -1,0 +1,5 @@
+ch.zhaw.gameconsoleapp.guessnumber.web.config
+ch.zhaw.gameconsoleapp.guessnumber.web.controller
+ch.zhaw.gameconsoleapp.guessnumber.web.service
+ch.zhaw.gameconsoleapp.guessnumber.web.util
+ch.zhaw.gameconsoleapp.guessnumber.web.util.thymeleaf

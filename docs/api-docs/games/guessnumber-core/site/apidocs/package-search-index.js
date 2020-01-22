@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface"},{"l":"ch.zhaw.gameconsoleapp.guessnumber.core.components"},{"l":"ch.zhaw.gameconsoleapp.guessnumber.core.config"},{"l":"ch.zhaw.gameconsoleapp.guessnumber.core.service"}]

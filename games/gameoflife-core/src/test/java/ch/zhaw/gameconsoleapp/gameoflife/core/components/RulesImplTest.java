@@ -50,7 +50,7 @@
 //         * creating of a new objects of type "GamePanelImpl" and "RulesImpl", respectively
 //         * the rules are tested on a 3 x 3 matrix
 //         */
-//        gamePanel = new GamePanelImpl(3, 3);
+//        gamePanel = new GamePanelImpl();
 //        rules = new RulesImpl();
 //    }
 //

@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"ch.zhaw.gameconsoleapp","c":"StartGuiDummy","l":"StartGuiDummy()","url":"%3Cinit%3E()"}]

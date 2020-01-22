@@ -1,0 +1,4 @@
+ch.zhaw.gameconsoleapp.guessnumber.core.annotationinterface
+ch.zhaw.gameconsoleapp.guessnumber.core.components
+ch.zhaw.gameconsoleapp.guessnumber.core.config
+ch.zhaw.gameconsoleapp.guessnumber.core.service
