@@ -1,6 +1,5 @@
-package ch.zhaw.gameconsoleapp.gameoflife.core.service;
+package ch.zhaw.gameconsoleapp.gameoflife.core.components;
 
-import ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

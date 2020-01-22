@@ -1,6 +1,4 @@
-package ch.zhaw.gameconsoleapp.gameoflife.core.service;
-
-import ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState;
+package ch.zhaw.gameconsoleapp.gameoflife.core.components;
 
 /**
  * this interface belongs to the class "GamePanelImpl"
