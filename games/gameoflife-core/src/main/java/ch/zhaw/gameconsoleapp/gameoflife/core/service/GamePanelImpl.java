@@ -1,5 +1,6 @@
-package ch.zhaw.gameconsoleapp.gameoflife.core.components;
+package ch.zhaw.gameconsoleapp.gameoflife.core.service;
 
+import ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -34,12 +35,15 @@ public class GamePanelImpl implements GamePanel {
     // == constructors ==
 
     @Autowired
-    public GamePanelImpl(int width, int height) {
+//    public GamePanelImpl(int width, int height) {
+    public GamePanelImpl() {
         /**
          * initialization of the instance variables
          */
-        this.width = width;
-        this.height = height;
+//        this.width = width;
+//        this.height = height;
+        this.width = 20;
+        this.height = 20;
         /**
          * initialization and creating of a new object of type "PixelState"
          */
@@ -64,7 +68,8 @@ public class GamePanelImpl implements GamePanel {
         /**
          * create a new "GamePanelImpl" object with the name "copy"
          */
-        GamePanelImpl copy = new GamePanelImpl(this.width, this.height);
+//        GamePanelImpl copy = new GamePanelImpl(this.width, this.height);
+        GamePanelImpl copy = new GamePanelImpl();
         /**
          * looping (screening) over the entire game panel and assign (set) to the "copy" object the state which has
          * been detected (get)

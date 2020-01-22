@@ -11,4 +11,5 @@ module gameoflife.core {
     requires spring.context;
 
     exports ch.zhaw.gameconsoleapp.gameoflife.core.service;
+    exports ch.zhaw.gameconsoleapp.gameoflife.core.components;
 }

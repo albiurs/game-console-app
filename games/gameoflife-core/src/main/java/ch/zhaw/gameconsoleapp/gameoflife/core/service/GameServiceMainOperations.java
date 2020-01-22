@@ -1,9 +1,6 @@
 package ch.zhaw.gameconsoleapp.gameoflife.core.service;
 
-import ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanel;
-import ch.zhaw.gameconsoleapp.gameoflife.core.components.GamePanelImpl;
-import ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState;
-import ch.zhaw.gameconsoleapp.gameoflife.core.components.RulesImpl;
+import ch.zhaw.gameconsoleapp.gameoflife.core.components.*;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -98,7 +95,8 @@ public class GameServiceMainOperations extends VBox {
          * initializing and creating of a new object of type "GamePanelImpl" with the corresponding width and height
          * (the numbers are choose by chance)
          */
-        this.originalGamePanel = new GamePanelImpl(20, 20);
+//        this.originalGamePanel = new GamePanelImpl(20, 20);
+        this.originalGamePanel = new GamePanelImpl();
     }
 
     // == private methods ==

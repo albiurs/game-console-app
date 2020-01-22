@@ -1,5 +1,7 @@
-package ch.zhaw.gameconsoleapp.gameoflife.core.components;
+package ch.zhaw.gameconsoleapp.gameoflife.core.service;
 
+import ch.zhaw.gameconsoleapp.gameoflife.core.components.PixelState;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -16,6 +18,14 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class RulesImpl implements Rules {
+
+
+    // == constructors ==
+    @Autowired
+    public RulesImpl () {
+        // nothing to do
+    }
+
 
     // == public methods ==
 
