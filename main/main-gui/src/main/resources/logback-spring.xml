@@ -7,8 +7,8 @@
     External Libraries > Maven: org.springframework.boot:spring-boot:x.x.xRELEASE > spring-boot-x.x.x.RELEASE.jar -->
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <!-- define logging levels -->
-    <logger name="ch.zhaw" level="TRACE"/>
-    <logger name="org.springframework" level="DEBUG"/>
+    <!-- define logging levels INFO, DEBUG or TRACE -->
+    <logger name="ch.zhaw" level="INFO"/>
+    <logger name="org.springframework" level="INFO"/>
 
 </configuration>
