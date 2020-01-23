@@ -9,15 +9,15 @@ The application is modularized in core and UI modules, whereas any game core mod
 connected to one of the following UI's as a: 
 - Console application
 - GUI application (JavaFX)
-- Web application
+- Web application (http://localhost:8080/)
 
-For complete documentation, please refer to the folder ./docs/, containing the following 
-resources:
+For complete documentation, please refer to the folder "docs/\*\*/\*", containing the following 
+documents:
 
 - Java API-Documentation
 - UML class and module diagrams
-- Project paper (German)
+- Project documentation (German)
 - Project presentation (German)
 
 
-2020-01-22, Game Console App Team
+2020-01-23, Game Console App Team
